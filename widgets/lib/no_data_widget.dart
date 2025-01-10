@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:localization/l10n/l10n.dart';
 import 'package:utils/utils.dart';
 
 class NoDataWidget extends StatelessWidget {
@@ -26,7 +25,7 @@ class NoDataWidget extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  context.l10n.kNoData,
+                  "No Data Found",
                   style: context.labelSmallDisabled,
                 ),
               ),

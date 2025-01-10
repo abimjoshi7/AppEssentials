@@ -15,12 +15,11 @@ dependencies:
   flutter_svg: ^2.0.10+1
   intl: ^0.19.0
   table_calendar: ^3.1.2
-
-# Module dependency_overrides
-  localization:
-    path: ../localization
   utils:
-    path: ../utils
+    git:
+      url: https://github.com/abimjoshi7/AppEssentials.git
+      path: utils
+      ref: main
 
 dev_dependencies:
   flutter_test:

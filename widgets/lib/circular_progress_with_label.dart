@@ -24,7 +24,7 @@ class CircularProgressWithLabel extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
-          CircularProgressIndicator(
+          CircularProgressIndicator.adaptive(
             value: progress / 100,
             backgroundColor: backgroundColor.withValues(alpha: 0.2),
             valueColor: AlwaysStoppedAnimation<Color>(progressColor),

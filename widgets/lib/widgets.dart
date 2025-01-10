@@ -3,7 +3,6 @@ library widgets;
 export 'app_calendar.dart';
 export 'attachment_with_badge.dart';
 export 'amount_status.dart';
-export 'app_filter.dart';
 export 'app_sorter.dart';
 export 'circular_progress_with_label.dart';
 export 'column_info_detail.dart';
@@ -19,7 +18,6 @@ export 'custom_tab_bar.dart';
 export 'custom_table.dart';
 export 'custom_text_form_field.dart';
 export 'datepicker_formfield.dart';
-export 'detail_page_app_bar.dart';
 export 'dpb_card.dart';
 export 'drawer_item.dart';
 export 'elevated_card.dart';
@@ -34,7 +32,6 @@ export 'info_card.dart';
 export 'key_value_widget.dart';
 export 'list_item_picker.dart';
 export 'main_view_section.dart';
-export 'master_picker.dart';
 export 'no_data_widget.dart';
 export 'or_divider.dart';
 export 'otp_dialog.dart';
@@ -49,9 +46,3 @@ export 'stckd_btm_btn.dart';
 export 'tap_text_field.dart';
 export 'value_box.dart';
 export 'view_page.dart';
-
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}

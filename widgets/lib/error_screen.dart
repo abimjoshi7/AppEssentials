@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:localization/l10n/l10n.dart';
 import 'package:utils/utils.dart';
 
 class ErrorScreen extends StatelessWidget {
-  const ErrorScreen({super.key});
+  const ErrorScreen({
+    super.key,
+    this.errorMessage,
+  });
+
+  final String? errorMessage;
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -15,7 +19,7 @@ class ErrorScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  context.l10n.kSomethingWentWrong,
+                  errorMessage ?? 'Unknown Error.',
                   style: context.titleLarge,
                 ),
               ),
