@@ -1,0 +1,57 @@
+library widgets;
+
+export 'app_calendar.dart';
+export 'attachment_with_badge.dart';
+export 'amount_status.dart';
+export 'app_filter.dart';
+export 'app_sorter.dart';
+export 'circular_progress_with_label.dart';
+export 'column_info_detail.dart';
+export 'custom_a_chip.dart';
+export 'custom_dismissible.dart';
+export 'custom_drag_handle.dart';
+export 'custom_dropdown_field.dart';
+export 'custom_expansion_tile.dart';
+export 'custom_form_field.dart';
+export 'custom_loader.dart';
+export 'custom_search.dart';
+export 'custom_tab_bar.dart';
+export 'custom_table.dart';
+export 'custom_text_form_field.dart';
+export 'datepicker_formfield.dart';
+export 'detail_page_app_bar.dart';
+export 'dpb_card.dart';
+export 'drawer_item.dart';
+export 'elevated_card.dart';
+export 'empty_add_card.dart';
+export 'error_screen.dart';
+export 'exit_form_dialog.dart';
+export 'form_text_field.dart';
+export 'generic_failure_message.dart';
+export 'icon_text.dart';
+export 'inc_dec.dart';
+export 'info_card.dart';
+export 'key_value_widget.dart';
+export 'list_item_picker.dart';
+export 'main_view_section.dart';
+export 'master_picker.dart';
+export 'no_data_widget.dart';
+export 'or_divider.dart';
+export 'otp_dialog.dart';
+export 'payment_select_card.dart';
+export 'payment_tile.dart';
+export 'popup_box.dart';
+export 'routing_card.dart';
+export 'search_and_filter.dart';
+export 'segmented_tab_bar.dart';
+export 'status_indicator.dart';
+export 'stckd_btm_btn.dart';
+export 'tap_text_field.dart';
+export 'value_box.dart';
+export 'view_page.dart';
+
+/// A Calculator.
+class Calculator {
+  /// Returns [value] plus 1.
+  int addOne(int value) => value + 1;
+}

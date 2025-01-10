@@ -1,0 +1,34 @@
+name: widgets
+description: "A new Flutter package project."
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: ^3.5.3
+  flutter: ">=1.17.0"
+
+dependencies:
+  dropdown_search: ^6.0.1
+  flutter:
+    sdk: flutter
+  flutter_hooks: ^0.20.5
+  flutter_svg: ^2.0.10+1
+  intl: ^0.19.0
+  table_calendar: ^3.1.2
+
+# Module dependency_overrides
+  localization:
+    path: ../localization
+  utils:
+    path: ../utils
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+# flutter:
