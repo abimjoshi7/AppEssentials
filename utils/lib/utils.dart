@@ -4,6 +4,8 @@ export 'constants/constants.dart';
 export 'enums/enums.dart';
 export 'error/error.dart';
 export 'extensions/extensions.dart';
+export 'generics/generics.dart';
+export 'helpers/helpers.dart';
 export 'mixins/mixins.dart';
 export 'res/res.dart';
 
