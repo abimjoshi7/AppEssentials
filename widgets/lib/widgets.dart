@@ -36,6 +36,7 @@ export 'main_view_section.dart';
 export 'no_data_widget.dart';
 export 'or_divider.dart';
 export 'otp_dialog.dart';
+export 'outlined_container.dart';
 export 'payment_select_card.dart';
 export 'payment_tile.dart';
 export 'popup_box.dart';
