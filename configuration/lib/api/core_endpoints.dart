@@ -7,6 +7,7 @@ abstract class CoreEndpoints {
   static const String apiVersion = 'api';
 
   static const String baseUrl = kReleaseMode ? productionUrl : sandboxUrl;
+  static const String demoUrl = 'https://demo.bizakerp.com.np/$apiVersion/';
   static const String localUrl = 'http://192.168.18.7:7070/$apiVersion/';
   static const String sandboxUrl =
       'https://sandbox.bizakerp.com.np/$apiVersion/';
