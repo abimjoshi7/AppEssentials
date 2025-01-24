@@ -11,9 +11,8 @@ dependencies:
   dropdown_search: ^6.0.1
   flutter:
     sdk: flutter
-  flutter_hooks: ^0.20.5
   flutter_svg: ^2.0.10+1
-  intl: ^0.19.0
+  intl: ^0.20.1
   table_calendar: ^3.1.2
   utils:
     git:
@@ -24,7 +23,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
+  flutter_lints: ^5.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

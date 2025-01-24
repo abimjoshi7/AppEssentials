@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:utils/utils.dart';
 
-class CustomExpansionTile<T> extends HookWidget {
+class CustomExpansionTile<T> extends StatelessWidget {
   const CustomExpansionTile({
     super.key,
     required this.getTitle,

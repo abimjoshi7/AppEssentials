@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
-
 import 'package:utils/utils.dart';
 import 'package:widgets/widgets.dart';
 
-class AppSorter<T> extends HookWidget {
+class AppSorter<T> extends StatefulWidget {
   const AppSorter({
     super.key,
     required this.list,
@@ -21,34 +19,49 @@ class AppSorter<T> extends HookWidget {
   final bool initialSortType;
 
   @override
-  Widget build(BuildContext context) {
-    final toSelectString = useState<String>(initialValue);
-    final isAscending = useState<bool>(initialSortType);
-    final selectedValue = useState<T?>(null);
+  State<AppSorter<T>> createState() => _AppSorterState<T>();
+}
 
+class _AppSorterState<T> extends State<AppSorter<T>> {
+  late String toSelectString;
+  late bool isAscending;
+  T? selectedValue;
+
+  @override
+  void initState() {
+    super.initState();
+    toSelectString = widget.initialValue;
+    isAscending = widget.initialSortType;
+  }
+
+  @override
+  Widget build(BuildContext context) {
     void onSelect({
       required String selectedString,
       required T value,
     }) {
-      selectedValue.value = value;
-      if (toSelectString.value == selectedString) {
-        isAscending.value = !isAscending.value;
-      } else {
-        toSelectString.value = selectedString;
-      }
+      setState(() {
+        selectedValue = value;
+        if (toSelectString == selectedString) {
+          isAscending = !isAscending;
+        } else {
+          toSelectString = selectedString;
+        }
+      });
     }
 
     void onCancel() {
-      toSelectString.value = initialValue;
-      isAscending.value = true;
-
+      setState(() {
+        toSelectString = widget.initialValue;
+        isAscending = true;
+      });
       Navigator.pop(context);
     }
 
     void onApply() {
-      if (selectedValue.value == null) return;
-      final sortedRecord = (selectedValue.value!, isAscending.value);
-      onSelected(sortedRecord);
+      if (selectedValue == null) return;
+      final sortedRecord = (selectedValue!, isAscending);
+      widget.onSelected(sortedRecord);
       Navigator.pop(context);
     }
 
@@ -86,39 +99,41 @@ class AppSorter<T> extends HookWidget {
         Flexible(
           child: ListView.builder(
             shrinkWrap: true,
-            itemCount: getStringList(list).length,
+            itemCount: widget.getStringList(widget.list).length,
             itemBuilder: (context, index) => Container(
               margin: const EdgeInsets.all(4),
-              decoration: toSelectString.value == getStringList(list)[index]
-                  ? BoxDecoration(
-                      borderRadius: BorderRadius.circular(
-                        24,
-                      ),
-                      border: Border.all(
-                        color: context.primary,
-                      ),
-                    )
-                  : null,
+              decoration:
+                  toSelectString == widget.getStringList(widget.list)[index]
+                      ? BoxDecoration(
+                          borderRadius: BorderRadius.circular(
+                            24,
+                          ),
+                          border: Border.all(
+                            color: context.primary,
+                          ),
+                        )
+                      : null,
               child: ListTile(
                 splashColor: kClrTrns,
                 onTap: () => onSelect(
-                  selectedString: getStringList(list)[index],
-                  value: list[index],
+                  selectedString: widget.getStringList(widget.list)[index],
+                  value: widget.list[index],
                 ),
                 leading: Icon(
-                  toSelectString.value == getStringList(list)[index]
+                  toSelectString == widget.getStringList(widget.list)[index]
                       ? Icons.circle
                       : Icons.circle_outlined,
                   color: context.primary,
                 ),
                 title: Text(
-                  getStringList(list)[index],
+                  widget.getStringList(widget.list)[index],
                 ),
-                trailing: toSelectString.value == getStringList(list)[index]
-                    ? _BoolWidget(
-                        isAscending: isAscending.value,
-                      )
-                    : null,
+                trailing:
+                    toSelectString == widget.getStringList(widget.list)[index]
+                        ? _BoolWidget(
+                            isAscending: isAscending,
+                          )
+                        : null,
               ),
             ),
           ),
@@ -133,7 +148,7 @@ class AppSorter<T> extends HookWidget {
             style: context.labelSmallDisabled,
           ),
           subtitle: Text(
-              "${toSelectString.value} ${isAscending.value ? "(Ascending)" : "(Descending)"}"),
+              "$toSelectString ${isAscending ? "(Ascending)" : "(Descending)"}"),
           trailing: ElevatedButton(
             onPressed: onApply,
             child: const Text(

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:utils/utils.dart';
 import 'package:widgets/widgets.dart';
 
-class DatePickerFormfield extends HookWidget {
+class DatePickerFormfield extends StatelessWidget {
   const DatePickerFormfield({
     required this.onChanged,
     super.key,

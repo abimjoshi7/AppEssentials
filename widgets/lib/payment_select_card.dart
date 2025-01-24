@@ -1,10 +1,8 @@
-// import 'package:barcode_scan2/barcode_scan2.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:utils/utils.dart';
 import 'package:widgets/widgets.dart';
 
-class PaymentSelectCard extends HookWidget {
+class PaymentSelectCard extends StatefulWidget {
   const PaymentSelectCard({
     super.key,
     required this.paymentMethod,
@@ -21,14 +19,36 @@ class PaymentSelectCard extends HookWidget {
   final ValueChanged<String>? getTransactionId;
 
   @override
-  Widget build(BuildContext context) {
-    final chequeDate = useState(DateTime.now());
-    final bankName = useTextEditingController();
-    final chequeNumber = useTextEditingController();
-    final onlineTransactionId = useTextEditingController();
+  State<PaymentSelectCard> createState() => _PaymentSelectCardState();
+}
 
+class _PaymentSelectCardState extends State<PaymentSelectCard> {
+  late DateTime chequeDate;
+  late TextEditingController bankName;
+  late TextEditingController chequeNumber;
+  late TextEditingController onlineTransactionId;
+
+  @override
+  void initState() {
+    super.initState();
+    chequeDate = DateTime.now();
+    bankName = TextEditingController();
+    chequeNumber = TextEditingController();
+    onlineTransactionId = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    bankName.dispose();
+    chequeNumber.dispose();
+    onlineTransactionId.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return ValueListenableBuilder(
-      valueListenable: paymentMethod,
+      valueListenable: widget.paymentMethod,
       builder: (context, value, child) => Column(
         children: [
           CustomTextFormField(
@@ -65,9 +85,11 @@ class PaymentSelectCard extends HookWidget {
                           PaymentMethod.values[index].name,
                         ),
                         value: PaymentMethod.values[index],
-                        groupValue: paymentMethod.value,
+                        groupValue: widget.paymentMethod.value,
                         onChanged: (value) {
-                          paymentMethod.value = value!;
+                          setState(() {
+                            widget.paymentMethod.value = value!;
+                          });
                           Navigator.pop(context);
                         },
                       ),
@@ -77,15 +99,17 @@ class PaymentSelectCard extends HookWidget {
               ),
             ),
             labelText: "Payment Method",
-            hintText: paymentMethod.value.name,
+            hintText: widget.paymentMethod.value.name,
           ),
-          switch (paymentMethod.value) {
+          switch (widget.paymentMethod.value) {
             PaymentMethod.Online => CustomTextFormField(
                 isRequired: true,
                 controller: onlineTransactionId,
                 labelText: "Transaction Id",
                 onChanged: (value) {
-                  if (getTransactionId != null) getTransactionId!(value);
+                  if (widget.getTransactionId != null) {
+                    widget.getTransactionId!(value);
+                  }
                 },
               ),
             PaymentMethod.Cheque => Padding(
@@ -95,10 +119,14 @@ class PaymentSelectCard extends HookWidget {
                     DatePickerFormfield(
                       labelText: "Cheque Date",
                       isRequired: true,
-                      date: chequeDate.value,
+                      date: chequeDate,
                       onChanged: (value) {
-                        chequeDate.value = value;
-                        if (getTransactionId != null) getChequeDate!(value);
+                        setState(() {
+                          chequeDate = value;
+                        });
+                        if (widget.getTransactionId != null) {
+                          widget.getChequeDate!(value);
+                        }
                       },
                     ),
                     CustomTextFormField(
@@ -106,7 +134,9 @@ class PaymentSelectCard extends HookWidget {
                       isRequired: true,
                       labelText: "Bank Name",
                       onFieldSubmitted: (value) {
-                        if (getBankName != null) getBankName!(value);
+                        if (widget.getBankName != null) {
+                          widget.getBankName!(value);
+                        }
                       },
                     ),
                     CustomTextFormField(
@@ -114,7 +144,9 @@ class PaymentSelectCard extends HookWidget {
                       controller: chequeNumber,
                       labelText: "Cheque Number",
                       onFieldSubmitted: (value) {
-                        if (getChequeNumber != null) getChequeNumber!(value);
+                        if (widget.getChequeNumber != null) {
+                          widget.getChequeNumber!(value);
+                        }
                       },
                     ),
                   ],

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:utils/utils.dart';
 import 'package:widgets/widgets.dart';
 
-class ViewPage extends HookWidget {
-  const ViewPage({super.key, 
+class ViewPage extends StatelessWidget {
+  const ViewPage({
+    super.key,
     required this.appTitle,
     required this.onSort,
     required this.onFilter,
