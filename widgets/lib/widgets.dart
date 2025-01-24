@@ -1,9 +1,10 @@
-library widgets;
+library;
 
-export 'app_calendar.dart';
-export 'attachment_with_badge.dart';
 export 'amount_status.dart';
+export 'app_calendar.dart';
+export 'app_filter.dart';
 export 'app_sorter.dart';
+export 'attachment_with_badge.dart';
 export 'circular_progress_with_label.dart';
 export 'column_info_detail.dart';
 export 'custom_a_chip.dart';
