@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-// import 'package:localization/l10n/l10n.dart';
 
 /// Extension on [BuildContext] to provide utility methods for accessing media query information,
 /// text styles, colors, and showing bottom sheets and snack bars.

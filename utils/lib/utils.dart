@@ -7,6 +7,7 @@ export 'extensions/extensions.dart';
 export 'generics/generics.dart';
 export 'helpers/helpers.dart';
 export 'mixins/mixins.dart';
+export 'network/network.dart';
 export 'res/res.dart';
 
 const kUtilPackage = 'packages/utils/';

@@ -1,3 +1,5 @@
+part of 'api.dart';
+
 abstract class ApiEndpoints {
   const ApiEndpoints._();
 

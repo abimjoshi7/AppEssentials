@@ -1,6 +1,4 @@
-import 'dart:core';
-
-import 'package:flutter/foundation.dart';
+part of 'api.dart';
 
 abstract class CoreEndpoints {
   const CoreEndpoints._();

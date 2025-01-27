@@ -1,2 +1,4 @@
-export 'core_endpoints.dart';
-export 'api_endpoints.dart';
+import 'package:flutter/foundation.dart';
+
+part 'api_endpoints.dart';
+part 'core_endpoints.dart';
