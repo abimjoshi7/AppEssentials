@@ -1,17 +1,19 @@
+import 'dart:async';
+
 import 'package:utils/utils.dart';
 
 abstract class RemoteDataSource<T> {
-  Future<Either<AppException, List<T>>> fetchAll({int? page, int? pageSize});
-  Future<Either<AppException, T>> fetchById(String id);
-  Future<Either<AppException, T>> create(T item);
-  Future<Either<AppException, T>> update(String id, T item);
-  Future<Either<AppException, None>> delete(String id);
+  FutureOr<Either<AppException, List<T>>> fetchAll({int? page, int? pageSize});
+  FutureOr<Either<AppException, T>> fetchById(String id);
+  FutureOr<Either<AppException, T>> create(T item);
+  FutureOr<Either<AppException, T>> update(String id, T item);
+  FutureOr<Either<AppException, None>> delete(String id);
 }
 
 abstract class LocalDataSource<T> {
-  Future<Either<AppException, List<T>>> fetchAll();
-  Future<Either<AppException, T?>> fetchById(String id);
-  Future<Either<AppException, int>> save(T item);
-  Future<Either<AppException, int>> delete(String id);
-  Future<Either<AppException, int>> clearCache();
+  FutureOr<Either<AppException, List<T>>> fetchAll();
+  FutureOr<Either<AppException, T?>> fetchById(String id);
+  FutureOr<Either<AppException, int>> save(T item);
+  FutureOr<Either<AppException, int>> delete(String id);
+  FutureOr<Either<AppException, int>> clearCache();
 }
