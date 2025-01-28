@@ -155,11 +155,11 @@ abstract class ApiEndpoints {
   static const kGetFolders = "folder/get";
   static const kSaveFile = "files/save-from-transaction";
   static const kDownloadFile = "files/getFile";
-  static const kGetAllSalesOrder = "netsuite/order";
-  static const kGetSalesOrder = "netsuite/order/";
-  static const kSaveSalesOrder = "netsuite/order/save";
-  static const kUpdateSalesOrder = "netsuite/order/update";
-  static const kDeleteSalesOrder = "netsuite/order/delete";
+  static const kGetAllSalesOrder = "order";
+  static const kGetSalesOrder = "order/";
+  static const kSaveSalesOrder = "order/save";
+  static const kUpdateSalesOrder = "order/update";
+  static const kDeleteSalesOrder = "order/delete";
   static const kGetAttendance = "staff-attendance";
   static const kSaveAttendance = "staff-attendance/save";
 
