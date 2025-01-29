@@ -153,7 +153,8 @@ abstract class ApiEndpoints {
   static const kGetEntityTypes = "drop-down/entity-list";
   static const kGetAllFiles = "files/getAllFiles";
   static const kGetFolders = "folder/get";
-  static const kSaveFile = "files/save-from-transaction";
+  static const kGetFolderDetail = "folder/GetFolderDetail";
+  static const kSaveFile = "files/save";
   static const kDownloadFile = "files/getFile";
   static const kGetAllSalesOrder = "order";
   static const kGetSalesOrder = "order/";
