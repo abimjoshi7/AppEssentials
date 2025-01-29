@@ -154,7 +154,8 @@ abstract class ApiEndpoints {
   static const kGetAllFiles = "files/getAllFiles";
   static const kGetFolders = "folder/get";
   static const kGetFolderDetail = "folder/GetFolderDetail";
-  static const kSaveFile = "files/save";
+  static const kSaveFile = "files/save-from-transaction";
+  static const kUploadFile = "files/save";
   static const kDownloadFile = "files/getFile";
   static const kGetAllSalesOrder = "order";
   static const kGetSalesOrder = "order/";
