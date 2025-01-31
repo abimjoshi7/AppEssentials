@@ -95,10 +95,11 @@ abstract class ApiEndpoints {
   static const kSaveTax = "tax/save";
   static const kUpdateTax = "tax/udpate";
   static const kDeleteTax = "tax/delete";
-  static const kGetAllCustomerReceipts = "netsuite/payment-form/all";
-  static const kSaveCustomerReceipt = "netsuite/payment-form/save";
-  static const kUpdateCustomerReceipt = "netsuite/payment-form/update";
-  static const kDeleteCustomerReceipt = "netsuite/payment-form/delete";
+  static const kGetAllCustomerReceipts = "payment-form/all";
+  static const kGetCustomerReceipts = "payment-form";
+  static const kSaveCustomerReceipt = "payment-form/save";
+  static const kUpdateCustomerReceipt = "payment-form/update";
+  static const kDeleteCustomerReceipt = "payment-form/delete";
   static const kGetAllVendorPayment = "netsuite/vendor-payment/all";
   static const kSaveVendorPayment = "netsuite/vendor-payment/save";
   static const kUpdateVendorPayment = "netsuite/vendor-payment/update";
