@@ -1,3 +1,5 @@
+part of 'error.dart';
+
 /// Base class for all custom exceptions in the application.
 /// This class centralizes the message handling logic for exceptions.
 abstract class AppException implements Exception {

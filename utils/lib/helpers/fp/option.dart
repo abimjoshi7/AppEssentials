@@ -1,3 +1,5 @@
+part of 'fp.dart';
+
 // A class for nullable values, similar to Maybe in Haskell.
 sealed class Option<T> {
   const Option();
@@ -37,3 +39,19 @@ extension OptionExtensions<T> on Option<T> {
     return None<R>();
   }
 }
+
+/// Useful in functional programming when a function needs to return something but has no actual value.
+class Unit {
+  /// A shared instance of `Unit` to avoid unnecessary allocations.
+  static const Unit instance = Unit._();
+
+  /// Private constructor to prevent external instantiation.
+  const Unit._();
+
+  @override
+  String toString() => "No Value";
+}
+
+/// A globally accessible instance to represent "no value" in FP constructs.
+/// This avoids name conflicts while maintaining clarity.
+const Unit unitV = Unit.instance;

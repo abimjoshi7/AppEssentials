@@ -1,3 +1,5 @@
+part of 'fp.dart';
+
 // A class to handle exceptions gracefully during function execution.
 sealed class Try<T> {
   const Try();

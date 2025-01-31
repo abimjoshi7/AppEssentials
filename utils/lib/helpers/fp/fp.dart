@@ -1,3 +1,3 @@
-export 'either.dart';
-export 'option.dart';
-export 'try.dart';
+part 'either.dart';
+part 'option.dart';
+part 'try.dart';

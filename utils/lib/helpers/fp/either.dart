@@ -1,3 +1,5 @@
+part of 'fp.dart';
+
 sealed class Either<L, R> {
   const Either();
 }

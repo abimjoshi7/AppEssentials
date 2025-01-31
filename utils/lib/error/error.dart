@@ -1,2 +1,2 @@
-export 'exception.dart';
-export 'exception_manager.dart';
+part 'exception.dart';
+part 'exception_manager.dart';

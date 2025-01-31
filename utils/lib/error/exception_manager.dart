@@ -1,4 +1,4 @@
-import 'package:utils/error/error.dart';
+part of 'error.dart';
 
 class ExceptionManager {
   const ExceptionManager._();
