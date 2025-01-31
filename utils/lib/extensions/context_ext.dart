@@ -118,7 +118,7 @@ extension BuildContextEntension<T> on BuildContext {
   // * Popups
   /// Shows a modal bottom sheet with the given [child] widget.
   /// Additional customization options are available via named parameters.
-  Future<T?> showAppModalSheet(
+  Future<S?> showAppModalSheet<S>(
     Widget child, {
     bool isScrollControlled = true,
     bool useSafeArea = true,
@@ -131,7 +131,7 @@ extension BuildContextEntension<T> on BuildContext {
     bool canPop = true,
   }) {
     // Cache the MediaQuery data to avoid multiple lookups.
-    return showModalBottomSheet<T>(
+    return showModalBottomSheet<S>(
       enableDrag: enableDrag,
       showDragHandle: showDragHandle,
       context: this,
