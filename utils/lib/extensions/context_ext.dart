@@ -118,7 +118,7 @@ extension BuildContextEntension<T> on BuildContext {
   // * Popups
   /// Shows a modal bottom sheet with the given [child] widget.
   /// Additional customization options are available via named parameters.
-  Future<T?> showBottomSheet(
+  Future<T?> showAppModalSheet(
     Widget child, {
     bool isScrollControlled = true,
     bool useSafeArea = true,
