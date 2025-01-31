@@ -131,7 +131,7 @@ extension BuildContextEntension<T> on BuildContext {
     bool canPop = true,
   }) {
     // Cache the MediaQuery data to avoid multiple lookups.
-    return showModalBottomSheet(
+    return showModalBottomSheet<T?>(
       enableDrag: enableDrag,
       showDragHandle: showDragHandle,
       context: this,
