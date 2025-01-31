@@ -1,4 +1,3 @@
-
 /// Base class for all custom exceptions in the application.
 /// This class centralizes the message handling logic for exceptions.
 abstract class AppException implements Exception {
@@ -6,7 +5,7 @@ abstract class AppException implements Exception {
   const AppException([this.message]);
 
   @override
-  String toString() => message ?? "Exception: $message";
+  String toString() => message ?? "AppException";
 }
 
 /// Exception for permissions.
@@ -21,7 +20,12 @@ class UnknownException extends AppException {
 
 /// Exception for server-related errors.
 class ServerException extends AppException {
-  const ServerException([super.message]);
+  final int? statusCode;
+  const ServerException([super.message, this.statusCode]);
+
+  @override
+  String toString() =>
+      "ServerException${statusCode != null ? " (Status Code: $statusCode)" : ""}: ${message ?? "Unknown error"}";
 }
 
 /// Exception for cache-related errors.
@@ -47,4 +51,14 @@ class ForgotPasswordException extends LoginException {
 /// Exception for empty list errors.
 class EmptyListException extends AppException {
   const EmptyListException([super.message]);
+}
+
+/// Exception for network request failures.
+class RestClientException extends AppException {
+  final int? statusCode;
+  const RestClientException([super.message, this.statusCode]);
+
+  @override
+  String toString() =>
+      "RestClientException${statusCode != null ? " (Status Code: $statusCode)" : ""}: ${message ?? "Network error"}";
 }
