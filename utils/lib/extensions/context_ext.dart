@@ -148,6 +148,7 @@ extension BuildContextEntension<T> on BuildContext {
             if (didPop) return;
 
             final bool? shouldPop = await showDialog(
+              barrierDismissible: true,
               context: context,
               builder: (context) => const _ExitFormDialog(),
             );
