@@ -48,6 +48,13 @@ class Unit {
   /// Private constructor to prevent external instantiation.
   const Unit._();
 
+  /// Converts `Unit` to a JSON-compatible format.
+  Map<String, dynamic> toJson() => {};
+
+  /// Creates a `Unit` instance from JSON.
+  /// Since `Unit` has no state, it always returns `Unit.instance`.
+  factory Unit.fromJson(Map<String, dynamic> json) => instance;
+
   @override
   String toString() => "No Value";
 }
