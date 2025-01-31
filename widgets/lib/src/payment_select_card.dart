@@ -54,7 +54,7 @@ class _PaymentSelectCardState extends State<PaymentSelectCard> {
               Icons.arrow_drop_down_rounded,
             ),
             readOnly: true,
-            onTap: () => context.showBottomSheet(
+            onTap: () => context.showAppModalSheet(
               Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
