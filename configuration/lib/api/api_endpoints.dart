@@ -182,5 +182,6 @@ abstract class ApiEndpoints {
   static const kSaveCustomerStock = 'party-stock/save';
   static const kGetCustomersByRouteId =
       'party-route-map/parties-in-singleroute';
-  static const kSavePartyImage = "party_image/save";
+  static const kGetPartyImage = "party-image";
+  static const kSavePartyImage = "party-image/save";
 }
