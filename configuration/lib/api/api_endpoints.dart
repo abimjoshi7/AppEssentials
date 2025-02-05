@@ -167,7 +167,7 @@ abstract class ApiEndpoints {
   static const kSaveAttendance = "staff-attendance/save";
 
 // * SFM
-  static const kGetEmployeeByUserId = 'employee/employee-by-user-id/{user_id}';
+  static const kGetEmployeeByUserId = 'employee/get-by-id';
   static const kGetPartyRouteMap = 'party-route-map';
   static const kSavePartyRouteMap = 'party-route-map/save';
   static const kGetSalesmanRoute = 'route-plan/employee';
