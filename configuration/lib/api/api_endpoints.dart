@@ -184,4 +184,7 @@ abstract class ApiEndpoints {
       'party-route-map/parties-in-singleroute';
   static const kGetPartyImage = "party-image";
   static const kSavePartyImage = "party-image/save";
+  static const kSavePartyFile = "party-image/save-party-file";
+  static const kGetEOD = "eod";
+  static const kSaveEOD = "eod/save";
 }
