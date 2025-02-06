@@ -117,7 +117,7 @@ abstract class ApiEndpoints {
   static const kGetWriteCheck = "write-check/get";
   static const kGetWriteCheckById = "write-check/";
   static const kSaveWriteCheck = "write-check/save";
-  static const kUpdateWriteCheck = "write-check/udpate";
+  static const kUpdateWriteCheck = "write-check/udpuserIdate";
   static const kDeleteWriteCheck = "write-check/delete";
   static const kGetFundTransfer = "fund-transfer/get";
   static const kSaveFundTransfer = "fund-transfer/save";
@@ -167,7 +167,7 @@ abstract class ApiEndpoints {
   static const kSaveAttendance = "staff-attendance/save";
 
 // * SFM
-  static const kGetEmployeeByUserId = 'employee/get-by-id';
+  static const kGetEmployeeByUserId = 'employee/get-by-id/';
   static const kGetPartyRouteMap = 'party-route-map';
   static const kSavePartyRouteMap = 'party-route-map/save';
   static const kGetSalesmanRoute = 'route-plan/employee';
