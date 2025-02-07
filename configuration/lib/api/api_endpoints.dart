@@ -37,11 +37,11 @@ abstract class ApiEndpoints {
   static const kDeleteItem = 'item/delete';
   static const kGetSpecialType = 'item/special-type';
   static const kGetSubType = 'item/sub-type';
-  static const kGetSalesInvoiceById = "netsuite/invoice/";
-  static const kGetSalesInvoice = "netsuite/invoice/paged";
+  static const kGetSalesInvoiceById = "invoice/";
+  static const kGetSalesInvoice = "invoice/paged";
   static const kSaveSalesInvoice = "invoice/save";
   static const kUpdateSalesInvoice = "invoice/update-invoice";
-  static const kDeleteSalesInvoice = "netsuite/invoice/delete";
+  static const kDeleteSalesInvoice = "invoice/delete";
   static const kGetLocation = "inventory-location";
   static const kSaveLocation = "inventory-location/save";
   static const kSavePayment = 'netsuite/payment-form/save';
