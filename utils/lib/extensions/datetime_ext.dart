@@ -59,6 +59,11 @@ String convertTimeToString(DateTime dateTime) {
 }
 
 extension DateTimeExtension on DateTime {
+  DateTime startOfToday() =>
+      DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
+
+  // Get tomorrow's date at midnight
+  DateTime startOfTomorrow() => startOfToday().add(const Duration(days: 1));
   bool isSameDate(DateTime other) {
     final date = this;
 
