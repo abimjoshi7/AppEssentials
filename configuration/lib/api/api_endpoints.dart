@@ -38,7 +38,7 @@ abstract class ApiEndpoints {
   static const kGetSpecialType = 'item/special-type';
   static const kGetSubType = 'item/sub-type';
   static const kGetSalesInvoiceById = "invoice/";
-  static const kGetSalesInvoice = "invoice/paged";
+  static const kGetSalesInvoice = "invoice/get";
   static const kSaveSalesInvoice = "invoice/save";
   static const kUpdateSalesInvoice = "invoice/update-invoice";
   static const kDeleteSalesInvoice = "invoice/delete";
