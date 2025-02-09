@@ -21,6 +21,7 @@ abstract class ApiEndpoints {
   static const kCheckUser = 'auth/check-user-name';
   static const kQuerySelector = 'auth/dashboard-report/query-selector';
   static const kGetAllCustomer = 'visit';
+  static const kGetAllBilledCustomer = 'visit/all/billed-customers';
   static const kGetBilledCustomer = 'visit/billed/paged';
   static const kPostCustomer = 'visit/save';
   static const kUpdateCustomer = 'visit/update';
