@@ -176,8 +176,7 @@ abstract class ApiEndpoints {
   static const kGetSalesmanRoute = 'route-plan/employee';
   // static const kGetSalesmanRoute =
   //     'salesman-route-map/routes-by-salesman/{salesman_id}';
-  static const kGetSalesmanActivity =
-      'salesman-activity/all-visit-plan-summary';
+  static const kGetSalesmanActivity = 'salesman-activity/visit-plan-summary';
   static const kSaveSalesmanLocation = 'salesman-location/save';
   static const kGetUnvisitedRoute = 'visited-route/unvisited';
   static const kGetVisitedRoute = 'visited-route/visited';
