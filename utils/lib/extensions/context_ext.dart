@@ -142,29 +142,31 @@ extension BuildContextEntension<T> on BuildContext {
       isDismissible: isDismissible,
       constraints: constraints,
       builder: (context) {
-        return PopScope(
-          canPop: canPop,
-          onPopInvokedWithResult: (didPop, result) async {
-            if (didPop) return;
+        return ScaffoldMessenger(
+          child: PopScope(
+            canPop: canPop,
+            onPopInvokedWithResult: (didPop, result) async {
+              if (didPop) return;
 
-            final bool? shouldPop = await showDialog(
-              barrierDismissible: true,
-              context: context,
-              builder: (context) => const _ExitFormDialog(),
-            );
+              final bool? shouldPop = await showDialog(
+                barrierDismissible: true,
+                context: context,
+                builder: (context) => const _ExitFormDialog(),
+              );
 
-            if (shouldPop ?? false) {
-              Navigator.pop(this);
-            }
-          },
-          child: Padding(
-            padding: EdgeInsets.only(
-              bottom: MediaQuery.viewInsetsOf(context).bottom,
-              left: 8,
-              right: 8,
-              top: 8,
+              if (shouldPop ?? false) {
+                Navigator.pop(this);
+              }
+            },
+            child: Padding(
+              padding: EdgeInsets.only(
+                bottom: MediaQuery.viewInsetsOf(context).bottom,
+                left: 8,
+                right: 8,
+                top: 8,
+              ),
+              child: child,
             ),
-            child: child,
           ),
         );
       },
