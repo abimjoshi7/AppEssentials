@@ -143,9 +143,9 @@ extension BuildContextEntension<T> on BuildContext {
       isDismissible: isDismissible,
       constraints: constraints,
       builder: (context) {
-        return ScaffoldMessenger(
-          key: scaffoldMessengerKey,
-          child: PopScope(
+        return Scaffold(
+          key: GlobalKey<ScaffoldState>(),
+          body: PopScope(
             canPop: canPop,
             onPopInvokedWithResult: (didPop, result) async {
               if (didPop) return;
