@@ -122,6 +122,7 @@ extension BuildContextEntension<T> on BuildContext {
     Widget child, {
     bool isScrollControlled = true,
     bool useSafeArea = true,
+    Key? scaffoldMessengerKey,
     Color? backgroundColor,
     Color? barrierColor,
     BoxConstraints? constraints,
@@ -143,6 +144,7 @@ extension BuildContextEntension<T> on BuildContext {
       constraints: constraints,
       builder: (context) {
         return ScaffoldMessenger(
+          key: scaffoldMessengerKey,
           child: PopScope(
             canPop: canPop,
             onPopInvokedWithResult: (didPop, result) async {
