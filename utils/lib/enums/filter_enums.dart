@@ -120,6 +120,22 @@ enum InvoiceFilters {
   WrittenOffInvoices,
 }
 
+enum OrderFilters {
+  AllOrders,
+  DraftOrders,
+  LockedOrders,
+  OrdersPendingApproval,
+  ApprovedOrders,
+  CustomerViewedOrders,
+  PariallyPaidOrders,
+  UnpaidOrders,
+  OverdueOrders,
+  PaymentInitiated,
+  PaidOrders,
+  VoidOrders,
+  WrittenOffOrders,
+}
+
 enum ExpenseFilters {
   AllExpenses,
   UnbilledExpenses,
