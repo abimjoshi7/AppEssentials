@@ -5,7 +5,7 @@ class CustomTabBar extends StatelessWidget {
     super.key,
     required this.tabController,
     required this.labels,
-    this.tabBarIndicatorSize = TabBarIndicatorSize.label,
+    this.tabBarIndicatorSize = TabBarIndicatorSize.tab,
     this.dividerColor = Colors.transparent,
     this.isScrollable = false,
     this.backgroundColor = const Color(0xFFF3F3F3),
