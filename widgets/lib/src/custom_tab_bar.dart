@@ -30,14 +30,13 @@ class CustomTabBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(4),
-      margin: const EdgeInsets.symmetric(horizontal: 16),
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: BorderRadius.circular(borderRadius),
       ),
       child: TabBar(
         dividerColor: dividerColor,
-        indicatorSize: TabBarIndicatorSize.tab,
+        indicatorSize: tabBarIndicatorSize,
         isScrollable: isScrollable,
         tabAlignment: isScrollable ? TabAlignment.start : null,
         // Custom indicator
@@ -46,7 +45,7 @@ class CustomTabBar extends StatelessWidget {
           borderRadius: BorderRadius.circular(borderRadius - 4),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withValues(alpha: 0.05),
+              color: selectedLabelColor.withValues(alpha: 0.05),
               blurRadius: 4,
               offset: const Offset(0, 2),
             ),
@@ -68,10 +67,18 @@ class CustomTabBar extends StatelessWidget {
         ),
         // Tabs
         tabs: labels
-            .map((label) => Tab(
-                  height: 36,
-                  text: label,
-                ))
+            .map(
+              (label) => Tab(
+                height: 36,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    label,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ),
+            )
             .toList(),
         controller: tabController,
       ),
