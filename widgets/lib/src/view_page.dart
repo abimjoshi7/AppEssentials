@@ -42,16 +42,16 @@ class ViewPage extends StatelessWidget {
         appTitle,
         style: context.titleMedium,
       ),
-      actions: [
-        IconButton(
-          icon: const Icon(Icons.search),
-          onPressed: onSearch,
-        ),
-      ],
-      bottom: PreferredSize(
-        preferredSize: Size.fromHeight(context.height * 0.045),
-        child: buildBottomAppBar(context),
-      ),
+      // actions: [
+      //   IconButton(
+      //     icon: const Icon(Icons.search),
+      //     onPressed: onSearch,
+      //   ),
+      // ],
+      // bottom: PreferredSize(
+      //   preferredSize: Size.fromHeight(context.height * 0.045),
+      //   child: buildBottomAppBar(context),
+      // ),
     );
   }
 
