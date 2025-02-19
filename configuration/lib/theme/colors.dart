@@ -1,6 +1,5 @@
 part of 'theme.dart';
 
-
 abstract class LightColors {
   static Color get primary => const Color(0xFF005EB4);
   static Color get onPrimary => const Color(0xFFFFFFFF);
@@ -64,7 +63,7 @@ abstract class DarkColors {
   static Color get onBackground => const Color(0xFFE6E1E5);
   static Color get surface => const Color(0xFF1C1B1F);
   static Color get onSurface => const Color(0xFFE6E1E5);
-  static Color get outline => const Color(0xFF938F99);
+  static Color get outline => const Color(0xFF332D41);
   static Color get surfaceVariant => const Color(0xFF49454F);
   static Color get onSurfaceVariant => const Color(0xFFCAC4D0);
 
