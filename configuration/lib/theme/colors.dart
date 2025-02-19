@@ -72,6 +72,6 @@ abstract class DarkColors {
   static Color get inversePrimary => const Color(0xFF005EB4);
   static Color get shadow => const Color(0xFF000000);
   static Color get surfaceTint => const Color(0xff25A0E2);
-  static Color get outlineVariant => const Color(0xFF43474E);
+  static Color get outlineVariant => const Color(0xFF49454F);
   static Color get scrim => const Color(0xFF000000);
 }
