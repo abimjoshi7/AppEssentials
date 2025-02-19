@@ -24,6 +24,8 @@ class LightColorScheme extends ColorScheme {
           outline: LightColors.outline,
           surfaceContainerHighest: LightColors.surfaceVariant,
           onSurfaceVariant: LightColors.onSurfaceVariant,
+          inverseSurface: DarkColors.inverseSurface,
+          onInverseSurface: DarkColors.onInverseSurface,
           brightness: Brightness.light,
         );
 }
@@ -52,6 +54,8 @@ class DarkColorScheme extends ColorScheme {
           outline: DarkColors.outline,
           surfaceContainerHighest: DarkColors.surfaceVariant,
           onSurfaceVariant: DarkColors.onSurfaceVariant,
+          inverseSurface: DarkColors.inverseSurface,
+          onInverseSurface: DarkColors.onInverseSurface,
           brightness: Brightness.dark,
         );
 }
