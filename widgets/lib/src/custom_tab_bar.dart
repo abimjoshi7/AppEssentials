@@ -31,7 +31,7 @@ class CustomTabBar extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(4),
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.secondaryContainer,
+        color: Theme.of(context).colorScheme.inverseSurface,
         borderRadius: BorderRadius.circular(borderRadius),
       ),
       child: TabBar(
@@ -41,7 +41,7 @@ class CustomTabBar extends StatelessWidget {
         tabAlignment: isScrollable ? TabAlignment.start : null,
         // Custom indicator
         indicator: BoxDecoration(
-          color: Theme.of(context).colorScheme.onSecondaryContainer,
+          color: Theme.of(context).colorScheme.onInverseSurface,
           borderRadius: BorderRadius.circular(borderRadius - 4),
           boxShadow: [
             BoxShadow(
