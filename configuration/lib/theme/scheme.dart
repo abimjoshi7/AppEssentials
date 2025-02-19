@@ -26,6 +26,10 @@ class LightColorScheme extends ColorScheme {
           onSurfaceVariant: LightColors.onSurfaceVariant,
           inverseSurface: LightColors.inverseSurface,
           onInverseSurface: LightColors.onInverseSurface,
+          inversePrimary: LightColors.inversePrimary,
+          surfaceTint: LightColors.surfaceTint,
+          scrim: LightColors.scrim,
+          shadow: LightColors.shadow,
           brightness: Brightness.light,
         );
 }
@@ -56,6 +60,10 @@ class DarkColorScheme extends ColorScheme {
           onSurfaceVariant: DarkColors.onSurfaceVariant,
           inverseSurface: DarkColors.inverseSurface,
           onInverseSurface: DarkColors.onInverseSurface,
+          inversePrimary: DarkColors.inversePrimary,
+          surfaceTint: DarkColors.surfaceTint,
+          scrim: DarkColors.scrim,
+          shadow: DarkColors.shadow,
           brightness: Brightness.dark,
         );
 }

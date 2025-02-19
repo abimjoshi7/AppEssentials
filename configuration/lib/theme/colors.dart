@@ -29,7 +29,7 @@ abstract class LightColors {
   static Color get surfaceVariant => const Color(0xFFE7E0EC);
   static Color get onSurfaceVariant => const Color(0xFF49454F);
 
-  static Color get onInverseSurface => const Color(0xFF49454F);
+  static Color get onInverseSurface => const Color(0xFFECF0FF);
   static Color get inverseSurface => const Color(0xFFECF0FF);
   static Color get inversePrimary => const Color(0xff25A0E2);
   static Color get shadow => const Color(0xFF000000);
