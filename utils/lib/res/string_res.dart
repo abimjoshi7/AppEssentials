@@ -46,4 +46,5 @@ enterprise.
   static const kTenantCodeKey = 'tenant_code';
   static const kAccessTokenExpirationKey = 'access_token_expiration';
   static const kRefreshTokenExpirationKey = 'refresh_token_expiration';
+  static const kLocaleCode = 'locale-code';
 }
