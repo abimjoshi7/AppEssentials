@@ -10,11 +10,11 @@ abstract class BaseRepository<T> {
   FutureOr<Either<Exception, T>> fetchById(String id);
 
   /// Create a new item.
-  FutureOr<Either<Exception, T>> create(T item);
+  FutureOr<Either<Exception, int>> create(T item);
 
   /// Update an existing item.
-  FutureOr<Either<Exception, T>> update(String id, T item);
+  FutureOr<Either<Exception, int>> update(String id, T item);
 
   /// Delete an item by its ID.
-  FutureOr<Either<Exception, void>> delete(String id);
+  FutureOr<Either<Exception, int>> delete(String id);
 }
