@@ -189,4 +189,5 @@ abstract class ApiEndpoints {
   static const kSavePartyFile = "party-image/save-party-file";
   static const kGetEOD = "eod";
   static const kSaveEOD = "eod/save";
+  static const kGetDetailedRoutePlan = "salesman-activity/detailed-route-plan";
 }
