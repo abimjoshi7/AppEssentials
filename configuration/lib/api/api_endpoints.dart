@@ -170,6 +170,7 @@ abstract class ApiEndpoints {
   static const kGetAttendance = "staff-attendance";
   static const kSaveAttendance = "staff-attendance/save";
   static const kGetLead = "visit/lead/paged";
+  static const kGetFulfillOrder = "fulfill-order";
 
 // * SFM
   static const kGetEmployeeByUserId = 'employee/get-by-id';
