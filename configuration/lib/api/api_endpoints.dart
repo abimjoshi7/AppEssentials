@@ -27,6 +27,8 @@ abstract class ApiEndpoints {
   static const kPostCustomer = 'visit/save';
   static const kUpdateCustomer = 'visit/update';
   static const kDeleteCustomer = 'visit/delete';
+  static const kToPotentialCustomer = 'visit/marked-to-potential-customers';
+  static const kToBilledCustomer = 'visit/marked-to-billed-customers';
   static const kGetCustomerStatus = "/netsuit/visit/customer-status";
   static const kGetUnits = 'unit';
   static const kSaveUnit = 'unit/save';
@@ -167,6 +169,7 @@ abstract class ApiEndpoints {
   static const kDeleteSalesOrder = "order/delete";
   static const kGetAttendance = "staff-attendance";
   static const kSaveAttendance = "staff-attendance/save";
+  static const kGetLead = "visit/lead/paged";
 
 // * SFM
   static const kGetEmployeeByUserId = 'employee/get-by-id';
