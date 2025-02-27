@@ -194,4 +194,7 @@ abstract class ApiEndpoints {
   static const kGetEOD = "eod";
   static const kSaveEOD = "eod/save";
   static const kGetDetailedRoutePlan = "salesman-activity/detailed-route-plan";
+  static const kGetDailyVisitedRoute = "daily-visit/visited";
+  static const kGetDailyUnvisitedRoute = "daily-visit/unvisited";
+  static const kSaveDailyVisit = "daily-visit/save";
 }
