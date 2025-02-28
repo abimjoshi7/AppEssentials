@@ -185,6 +185,7 @@ abstract class ApiEndpoints {
   static const kGetUnvisitedRoute = 'visited-route/unvisited';
   static const kGetVisitedRoute = 'visited-route/visited';
   static const kSaveVisitedRoute = 'visited-route/save';
+  static const kGetCustomerStock = 'party-stock';
   static const kSaveCustomerStock = 'party-stock/save';
   static const kGetCustomersByRouteId =
       'party-route-map/parties-in-singleroute';
