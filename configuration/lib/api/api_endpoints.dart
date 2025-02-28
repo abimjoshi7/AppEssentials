@@ -197,4 +197,5 @@ abstract class ApiEndpoints {
   static const kGetDailyVisitedRoute = "daily-visit/visited";
   static const kGetDailyUnvisitedRoute = "daily-visit/unvisited";
   static const kSaveDailyVisit = "daily-visit/save";
+  static const kGetClosedRoutes = "daily-visit/get";
 }
