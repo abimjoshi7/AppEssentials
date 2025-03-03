@@ -4,13 +4,13 @@ abstract class CoreEndpoints {
   const CoreEndpoints._();
   static const String apiVersion = 'api';
 
+  // static const String apiIUrl = '';
+  static const String apiUrl = "$baseUrl/$apiVersion/";
   static const String baseUrl = kReleaseMode ? productionUrl : sandboxUrl;
-  static const String demoUrl = 'https://demo.bizakerp.com.np/$apiVersion/';
-  static const String localUrl = 'http://192.168.18.7:7070/$apiVersion/';
-  static const String sandboxUrl =
-      'https://sandbox.bizakerp.com.np/$apiVersion/';
-  static const String productionUrl =
-      'https://system.bizakerp.com.np/$apiVersion/';
+  static const String sandboxUrl = 'https://sandbox.bizakerp.com.np';
+  static const String productionUrl = 'https://system.bizakerp.com.np';
+  static const String demoUrl = 'https://demo.bizakerp.com.np/';
+  static const String localUrl = 'http://192.168.18.7:7070/';
 
   static const Map<String, dynamic> headers = {
     'Content-Type': 'application/json',
