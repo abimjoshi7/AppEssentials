@@ -3,7 +3,10 @@ part of 'src.dart';
 class NoDataWidget extends StatelessWidget {
   const NoDataWidget({
     super.key,
+    this.errorMessage,
   });
+
+  final String? errorMessage;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +26,7 @@ class NoDataWidget extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  "No Data Found",
+                  errorMessage ?? "No Data Found",
                   style: context.labelSmallDisabled,
                 ),
               ),
