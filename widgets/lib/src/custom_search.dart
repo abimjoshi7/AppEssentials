@@ -3,11 +3,13 @@ part of 'src.dart';
 class CustomSearch<T> extends SearchDelegate<T> {
   final List<T> list;
   final String Function(T t) getTitle;
+  final ValueChanged<String?>? onQuery;
   final ValueChanged<T>? onResult;
   final bool hasScanner;
 
   CustomSearch({
     required this.getTitle,
+    this.onQuery,
     this.onResult,
     this.list = const [],
     this.hasScanner = false,
@@ -43,6 +45,7 @@ class CustomSearch<T> extends SearchDelegate<T> {
                   getTitle(e),
                 ),
                 onTap: () {
+                  onQuery?.call(query);
                   onResult?.call(e);
                   close(context, e);
                 },
@@ -70,6 +73,7 @@ class CustomSearch<T> extends SearchDelegate<T> {
                   getTitle(e),
                 ),
                 onTap: () {
+                  onQuery?.call(query);
                   onResult?.call(e);
                   close(context, e);
                 },
