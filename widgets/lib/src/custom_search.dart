@@ -33,52 +33,50 @@ class CustomSearch<T> extends SearchDelegate<T> {
 
   @override
   Widget buildResults(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: list
-            .map(
-              (e) => Card(
-                child: ListTile(
-                  title: Text(
-                    getTitle(e),
-                  ),
-                  onTap: () {
-                    onResult?.call(e);
-                    close(context, e);
-                  },
+    return ListView(
+      shrinkWrap: true,
+      children: list
+          .map(
+            (e) => Card(
+              child: ListTile(
+                title: Text(
+                  getTitle(e),
                 ),
+                onTap: () {
+                  onResult?.call(e);
+                  close(context, e);
+                },
               ),
-            )
-            .toList(),
-      ),
+            ),
+          )
+          .toList(),
     );
   }
 
   @override
   Widget buildSuggestions(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: list
-            .where(
-              (element) => getTitle(element).toLowerCase().contains(
-                    query.toLowerCase(),
-                  ),
-            )
-            .map(
-              (e) => Card(
-                child: ListTile(
-                  title: Text(
-                    getTitle(e),
-                  ),
-                  onTap: () {
-                    onResult?.call(e);
-                    close(context, e);
-                  },
+    return ListView(
+      shrinkWrap: true,
+      children: list
+          .where(
+            (element) => getTitle(element).toLowerCase().contains(
+                  query.toLowerCase(),
                 ),
+          )
+          .map(
+            (e) => Card(
+              child: ListTile(
+                title: Text(
+                  getTitle(e),
+                ),
+                onTap: () {
+                  onResult?.call(e);
+                  close(context, e);
+                },
               ),
-            )
-            .toList(),
-      ),
+            ),
+          )
+          .toList(),
     );
   }
 }
