@@ -1,7 +1,7 @@
 part of 'src.dart';
 
 class CustomSearch<T> extends SearchDelegate<T> {
-  final Future<List<T>> Function(String query) fetchResults;
+  final Future<List<T>> Function(String? query)? fetchResults;
   final String Function(T t) getTitle;
   final ValueChanged<String?>? onQuery;
   final ValueChanged<T>? onResult;
@@ -23,7 +23,8 @@ class CustomSearch<T> extends SearchDelegate<T> {
 
     if (_debounce?.isActive ?? false) _debounce!.cancel();
     _debounce = Timer(const Duration(milliseconds: 500), () async {
-      final data = await fetchResults(query);
+      final data = await fetchResults?.call(query);
+      if (data == null) return;
       _results = data;
       if (context.mounted) showSuggestions(context); // Refresh UI
     });
@@ -66,8 +67,8 @@ class CustomSearch<T> extends SearchDelegate<T> {
   }
 
   Widget _buildList() {
-    return FutureBuilder<List<T>>(
-      future: fetchResults(query),
+    return FutureBuilder<List<T>?>(
+      future: fetchResults?.call(query),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(child: CircularProgressIndicator());
