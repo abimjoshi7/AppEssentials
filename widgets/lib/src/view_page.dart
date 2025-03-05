@@ -3,55 +3,58 @@ part of 'src.dart';
 class ViewPage extends StatelessWidget {
   const ViewPage({
     super.key,
-    required this.appTitle,
-    required this.onSort,
-    required this.onFilter,
-    required this.onSearch,
-    required this.tabController,
-    required this.tabTitles,
-    required this.onFabPressed,
-    required this.child,
+    this.appTitle,
+    this.child,
+    this.tabController,
+    this.tabTitles,
+    this.onSort,
+    this.onFilter,
+    this.onSearch,
+    this.onFabPressed,
   });
 
-  final String appTitle;
-  final VoidCallback onSort;
-  final VoidCallback onFilter;
-  final VoidCallback onSearch;
-  final TabController tabController;
-  final Widget child;
-  final List<String> tabTitles;
-  final VoidCallback onFabPressed;
+  final String? appTitle;
+  final Widget? child;
+  final List<String>? tabTitles;
+  final VoidCallback? onSort;
+  final VoidCallback? onFilter;
+  final VoidCallback? onSearch;
+  final TabController? tabController;
+  final VoidCallback? onFabPressed;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(context),
       body: child,
-      floatingActionButton: FloatingActionButton(
-        onPressed: onFabPressed,
-        child: const Icon(
-          Icons.add,
-        ),
-      ),
+      floatingActionButton: onFabPressed == null
+          ? null
+          : FloatingActionButton(
+              onPressed: onFabPressed,
+              child: const Icon(
+                Icons.add,
+              ),
+            ),
     );
   }
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
       title: Text(
-        appTitle,
+        appTitle ?? '',
         style: context.titleMedium,
       ),
-      // actions: [
-      //   IconButton(
-      //     icon: const Icon(Icons.search),
-      //     onPressed: onSearch,
-      //   ),
-      // ],
-      // bottom: PreferredSize(
-      //   preferredSize: Size.fromHeight(context.height * 0.045),
-      //   child: buildBottomAppBar(context),
-      // ),
+      actions: [
+        if (onSearch != null)
+          IconButton(
+            icon: const Icon(Icons.search),
+            onPressed: onSearch,
+          ),
+      ],
+      bottom: PreferredSize(
+        preferredSize: Size.fromHeight(context.height * 0.045),
+        child: buildBottomAppBar(context),
+      ),
     );
   }
 
@@ -60,11 +63,12 @@ class ViewPage extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         buildCustomTabBar(context),
-        buildFilterButton(context),
-        IconButton(
-          icon: const Icon(Icons.sort),
-          onPressed: onSort,
-        ),
+        if (onFilter != null) buildFilterButton(context),
+        if (onSort != null)
+          IconButton(
+            icon: const Icon(Icons.sort),
+            onPressed: onSort,
+          ),
       ],
     );
   }
@@ -74,11 +78,13 @@ class ViewPage extends StatelessWidget {
       constraints: BoxConstraints.loose(
         Size(context.width * 0.5, context.height * 0.045),
       ),
-      child: CustomTabBar(
-        tabController: tabController,
-        labels: tabTitles,
-        isScrollable: true,
-      ),
+      child: tabController == null
+          ? const SizedBox.shrink()
+          : CustomTabBar(
+              tabController: tabController!,
+              labels: tabTitles ?? [],
+              isScrollable: true,
+            ),
     );
   }
 
