@@ -19,6 +19,7 @@ class CustomDropdownButtonForField<T> extends StatelessWidget {
     this.isDrpdwnBtnVisible = true,
     this.scrollController,
     this.onPageScroll,
+    this.onSearchChanged,
   });
 
   final List<T> list;
@@ -37,9 +38,11 @@ class CustomDropdownButtonForField<T> extends StatelessWidget {
   final bool isDrpdwnBtnVisible;
   final ScrollController? scrollController;
   final VoidCallback? onPageScroll;
-
+  final ValueChanged<String?>? onSearchChanged;
   @override
-  Widget build(BuildContext context) {
+  Widget build(
+    BuildContext context,
+  ) {
     return CustomFormField(
       isRequired: isRequired,
       labelText: labelText,
@@ -72,7 +75,9 @@ class CustomDropdownButtonForField<T> extends StatelessWidget {
               ),
             shrinkWrap: true,
           ),
-          searchFieldProps: const TextFieldProps(
+          searchFieldProps: TextFieldProps(
+            
+            onChanged: onSearchChanged,
             decoration: InputDecoration(
               border: InputBorder.none,
               hintText: "Tap to search",
