@@ -167,6 +167,11 @@ abstract class ApiEndpoints {
   static const kSaveSalesOrder = "order/save";
   static const kUpdateSalesOrder = "order/update";
   static const kDeleteSalesOrder = "order/delete";
+  static const kGetAllSalesEstimate = "estimate";
+  static const kGetSalesEstimate = "estimate/";
+  static const kSaveSalesEstimate = "estimate/save";
+  static const kUpdateSalesEstimate = "estimate/update";
+  static const kDeleteSalesEstimate = "estimate/delete";
   static const kGetAttendance = "staff-attendance";
   static const kSaveAttendance = "staff-attendance/save";
   static const kGetLead = "visit/lead/paged";
