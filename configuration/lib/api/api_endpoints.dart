@@ -14,6 +14,7 @@ abstract class ApiEndpoints {
   static const kGetForgotPassCode = 'auth/get-forgot-code';
   static const kPostForgotPassword = 'auth/forgot-password';
   static const kCheckTenant = 'auth/check-tenant';
+  static const kCheckTenantAvailability = 'auth/check-tenant-availability';
   static const kRoleTenant = 'auth/role-tenant';
   static const kChangeRole = 'auth/change-role';
   static const kGetQuestions = 'security-question/get-security-question';
