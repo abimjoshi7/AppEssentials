@@ -4,7 +4,7 @@ abstract class ApiEndpoints {
   const ApiEndpoints._();
 
 // * Api Endpoints
-  static const kAuthenticate = 'auth/login';
+  static const kAuthenticate = 'auth/authenticate';
   static const kAppInit = 'auth/app-initialization-filter';
   static const kRegister = 'auth/self-register';
   static const kRole = 'roles/save';
