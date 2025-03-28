@@ -44,6 +44,8 @@ enterprise.
   static const kRefreshTokenKey = 'refresh_token';
   static const kUserDataKey = 'user_data';
   static const kTenantCodeKey = 'tenant_code';
+  static const kTenantId = 'tenant_id';
+  static const kRoleId = 'role_id';
   static const kAccessTokenExpirationKey = 'access_token_expiration';
   static const kRefreshTokenExpirationKey = 'refresh_token_expiration';
   static const kLocaleCode = 'locale-code';
