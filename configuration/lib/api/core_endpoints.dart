@@ -6,7 +6,7 @@ abstract class CoreEndpoints {
 
   // static const String apiIUrl = '';
   static const String apiUrl = "$baseUrl/$apiVersion/";
-  static const String baseUrl = kReleaseMode ? productionUrl : demoUrl;
+  static const String baseUrl = kReleaseMode ? productionUrl : sandboxUrl;
   static const String sandboxUrl = 'https://sandbox.bizakerp.com.np';
   static const String productionUrl = 'https://system.bizakerp.com.np';
   static const String demoUrl = 'https://demo.bizakerp.com.np/';
