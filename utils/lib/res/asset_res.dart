@@ -16,7 +16,7 @@ class AssetRes {
   static const kCompanyLogoLight = "assets/logo/Bizak-mobile-logo-white.png";
 
   /// The path to the Bizak logo image.
-  static const kBizakLogo = "assets/images/bizak-logo.png";
+  static const kBizakLogo = "assets/logo/bizak-logo-color.png";
 
   /// The path to the light variant of the Bizak logo, typically used on dark backgrounds.
   static const kBizakLogoLight = "assets/logo/logo_light.png";
