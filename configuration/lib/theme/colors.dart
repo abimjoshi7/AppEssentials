@@ -3,7 +3,7 @@ part of 'theme.dart';
 abstract class LightColors {
   static Color get primary => const Color(0xFF2E587A);
   static Color get onPrimary => const Color(0xFFF5F5F5);
-  static Color get primaryContainer => const Color(0xFFD6E3FF);
+  static Color get primaryContainer => const Color(0xFF2E587A);
   static Color get onPrimaryContainer => const Color(0xFF001B3C);
 
   static Color get secondary => const Color(0xFF62A3BC);
@@ -39,13 +39,13 @@ abstract class LightColors {
 }
 
 abstract class DarkColors {
-  static Color get primary => const Color(0xFFD0BCFF);
-  static Color get onPrimary => const Color(0xFF381E72);
-  static Color get primaryContainer => const Color(0xFF4F378B);
+  static Color get primary => const Color(0xFF2E587A);
+  static Color get onPrimary => const Color(0xFFF5F5F5);
+  static Color get primaryContainer => const Color(0xFF2E587A);
   static Color get onPrimaryContainer => const Color(0xFFEADDFF);
 
-  static Color get secondary => const Color(0xFFCCC2DC);
-  static Color get onSecondary => const Color(0xFF5A5A5A);
+  static Color get secondary => const Color(0xFF62A3BC);
+  static Color get onSecondary => const Color(0xFFFFFFFF);
   static Color get secondaryContainer => const Color(0xFF4A4458);
   static Color get onSecondaryContainer => const Color(0xFFE8DEF8);
 
