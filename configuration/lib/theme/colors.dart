@@ -4,7 +4,7 @@ abstract class LightColors {
   static Color get primary => const Color(0xFF2E587A);
   static Color get onPrimary => const Color(0xFFF5F5F5);
   static Color get primaryContainer => const Color(0xFF2E587A);
-  static Color get onPrimaryContainer => const Color(0xFF001B3C);
+  static Color get onPrimaryContainer => const Color(0xFFEADDFF);
 
   static Color get secondary => const Color(0xFF62A3BC);
   static Color get onSecondary => const Color(0xFFFFFFFF);
@@ -42,7 +42,7 @@ abstract class DarkColors {
   static Color get primary => const Color(0xFF2E587A);
   static Color get onPrimary => const Color(0xFFF5F5F5);
   static Color get primaryContainer => const Color(0xFF2E587A);
-  static Color get onPrimaryContainer => const Color(0xFFEADDFF);
+  static Color get onPrimaryContainer => const Color(0xFF001B3C);
 
   static Color get secondary => const Color(0xFF62A3BC);
   static Color get onSecondary => const Color(0xFFFFFFFF);
