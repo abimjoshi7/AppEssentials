@@ -59,9 +59,9 @@ abstract class DarkColors {
   static Color get errorContainer => const Color(0xFF8C1D18);
   static Color get onErrorContainer => const Color(0xFFF9DEDC);
 
-  static Color get background => const Color(0xFF2B5068);
+  static Color get background => const Color(0xFF1C1B1F);
   static Color get onBackground => const Color(0xFFE6E1E5);
-  static Color get surface => const Color(0xFF2B5068);
+  static Color get surface => const Color(0xFF1C1B1F);
   static Color get onSurface => const Color(0xFFE6E1E5);
   static Color get outline => const Color(0xFF5A5A5A);
   static Color get surfaceVariant => const Color(0xFF49454F);

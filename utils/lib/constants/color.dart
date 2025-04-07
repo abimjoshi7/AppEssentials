@@ -13,7 +13,8 @@ const kClrPink = Color(0xffF49CBB);
 const kClrBrown = Color(0xffFFB563);
 const kClrBlack = Colors.black;
 const kClrWhite = Colors.white;
-const kClrYlw = Color(0xffFFBC0A);
+const kClrOrange = Color(0xffE76F51);
+const kClrYlw = Color(0xffF4A261);
 const kClrAqua = Color(0xff00BD9D);
 const kClrGrey = Color(0xff878A99);
 const kClrBlueT = Color(0xffDEF1FB);
@@ -23,8 +24,8 @@ const kClrTrns = Colors.transparent;
 const kOnboardingColor = Color(0xff111827);
 
 const List<Color> colors = [
-  Colors.orange,
-  Colors.yellow,
+  kClrYlw,
+  kClrOrange,
   Colors.green,
   Colors.blue,
   Colors.indigo,
@@ -53,3 +54,6 @@ const List<Color> colors = [
   Colors.amberAccent,
   Colors.lightGreenAccent,
 ];
+
+// Yellow: F4A261
+// Orange: E76F51
