@@ -116,6 +116,17 @@ extension BuildContextEntension<T> on BuildContext {
   bool get isDark => Theme.of(this).brightness == Brightness.dark;
 
   // * Popups
+  void showSnackBar(String message, {bool isError = false}) {
+    ScaffoldMessenger.of(this).showSnackBar(
+      SnackBar(
+        content: Text(message),
+        backgroundColor: isError
+            ? Theme.of(this).colorScheme.error
+            : Theme.of(this).snackBarTheme.backgroundColor,
+      ),
+    );
+  }
+
   /// Shows a modal bottom sheet with the given [child] widget.
   /// Additional customization options are available via named parameters.
   Future<S?> showAppModalSheet<S>(

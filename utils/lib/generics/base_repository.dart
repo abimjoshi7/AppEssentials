@@ -15,6 +15,9 @@ abstract class BaseRepository<T> {
   /// Update an existing item.
   FutureOr<Either<Exception, int>> update(String id, T item);
 
+  /// Update an existing item with unique id.
+  FutureOr<Either<Exception, int>> updateWithId(String id, T item);
+
   /// Delete an item by its ID.
   FutureOr<Either<Exception, int>> delete(String id);
 }
