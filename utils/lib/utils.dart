@@ -1,5 +1,3 @@
-library utils;
-
 export 'constants/constants.dart';
 export 'enums/enums.dart';
 export 'error/error.dart';

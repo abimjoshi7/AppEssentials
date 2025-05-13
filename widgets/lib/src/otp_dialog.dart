@@ -13,7 +13,7 @@ class OTPDialog extends StatefulWidget {
   });
 
   @override
-  _OTPDialogState createState() => _OTPDialogState();
+  State<OTPDialog> createState() => _OTPDialogState();
 }
 
 class _OTPDialogState extends State<OTPDialog> {
