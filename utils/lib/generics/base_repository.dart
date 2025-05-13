@@ -13,7 +13,7 @@ abstract class BaseRepository<T> {
   FutureOr<Either<Exception, int>> create(T item);
 
   /// Update an existing item.
-  FutureOr<Either<Exception, int>> update(String id, T item);
+  FutureOr<Either<Exception, int>> update(T item);
 
   /// Update an existing item with unique id.
   FutureOr<Either<Exception, int>> updateWithId(String id, T item);
