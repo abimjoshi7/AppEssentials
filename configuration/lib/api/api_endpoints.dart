@@ -36,7 +36,7 @@ abstract class ApiEndpoints {
   static const kEditUnit = 'unit/edit';
   static const kDeleteUnit = 'unit/delete';
   static const kGetItemCategories = 'ItemCategory';
-  static const kGetItems = 'item/get';
+  static const kGetItems = 'item/list';
   static const kSaveItem = 'item/save-item';
   static const kUpdateItem = 'item/update-item';
   static const kDeleteItem = 'item/delete';
