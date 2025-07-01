@@ -104,8 +104,6 @@ extension BuildContextEntension<T> on BuildContext {
 
   Color get hintColor => Theme.of(this).hintColor;
 
-  Color get indicatorColor => Theme.of(this).indicatorColor;
-
   Color get errorColor => Theme.of(this).colorScheme.error;
 
   Color get background => Theme.of(this).colorScheme.surface;

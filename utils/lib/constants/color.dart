@@ -55,5 +55,3 @@ const List<Color> colors = [
   Colors.lightGreenAccent,
 ];
 
-// Yellow: F4A261
-// Orange: E76F51

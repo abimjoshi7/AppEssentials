@@ -1,7 +1,5 @@
 import 'package:intl/intl.dart';
 
-const kNullString = "";
-
 /// Extension on [String] to provide various string manipulation functionalities.
 extension StringCasingExtension on String {
   /// Converts the first character of the string to uppercase and the rest to lowercase.
@@ -69,22 +67,6 @@ extension AppValidations on String {
     return passwordRegex.hasMatch(this)
         ? null
         : 'Password must be at least 8 characters, including at least one capital letter, one number, and one special symbol';
-  }
-}
-
-/// Extension on [String] to provide a fast hashing functionality.
-extension StringToId on String {
-  /// Generates a hash code from the string.
-  int fastHash() {
-    var hash = 0xcbf29ce484222325;
-    for (var i = 0; i < length; i++) {
-      final codeUnit = codeUnitAt(i);
-      hash ^= codeUnit >> 8;
-      hash *= 0x100000001b3;
-      hash ^= codeUnit & 0xFF;
-      hash *= 0x100000001b3;
-    }
-    return hash;
   }
 }
 
