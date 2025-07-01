@@ -32,11 +32,11 @@ class AmountStatus extends StatelessWidget {
             children: [
               Text(
                 'Rs $amount',
-                style: context.titleMedium,
+                style: TextTheme.of(context).titleMedium,
               ),
               Text(
                 description,
-                style: context.labelLarge,
+                style: TextTheme.of(context).labelLarge,
               ),
             ],
           ),

@@ -25,7 +25,7 @@ class ValueBox extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Card(
-        surfaceTintColor: context.primaryColorLight,
+        surfaceTintColor: Theme.of(context).colorScheme.primaryContainer,
         child: Padding(
           padding: const EdgeInsets.all(
             16,
@@ -40,11 +40,11 @@ class ValueBox extends StatelessWidget {
                 children: [
                   Text(
                     label,
-                    style: context.labelLarge,
+                    style: TextTheme.of(context).labelLarge,
                   ),
                   Text(
-                    amount.formatWithCommas(),
-                    style: context.titleMedium,
+                    amount,
+                    style: TextTheme.of(context).titleMedium,
                   ),
                 ],
               ),

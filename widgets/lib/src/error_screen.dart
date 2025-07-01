@@ -19,11 +19,11 @@ class ErrorScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
                   errorMessage ?? 'Unknown Error.',
-                  style: context.titleLarge,
+                  style: TextTheme.of(context).titleLarge,
                 ),
               ),
               OutlinedButton(
-                onPressed: () => Navigator.pop(context),
+                onPressed: () => Navigator.of(context).pop(context),
                 child: const Text(
                   "Go Back",
                 ),

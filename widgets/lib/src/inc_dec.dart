@@ -22,7 +22,7 @@ class _IncDecState extends State<IncDec> {
         InkWell(
           borderRadius: BorderRadius.circular(10),
           enableFeedback: true,
-          splashColor: kClrBlue,
+          splashColor: Colors.blue,
           onTap: () {
             setState(() {
               if (count > 1) count--;
@@ -43,15 +43,15 @@ class _IncDecState extends State<IncDec> {
           ),
           child: Text(
             count.toString(),
-            style: context.titleMedium?.copyWith(
-              fontWeight: FontWeight.w900,
-            ),
+            style: TextTheme.of(context).titleMedium?.copyWith(
+                  fontWeight: FontWeight.w900,
+                ),
           ),
         ),
         InkWell(
           borderRadius: BorderRadius.circular(10),
           enableFeedback: true,
-          splashColor: kClrBlue,
+          splashColor: Colors.blue,
           onTap: () {
             setState(() {
               count++;

@@ -19,14 +19,14 @@ class GenericFailureMessage extends StatelessWidget {
           if (message != null)
             Text(
               message!,
-              style: context.headlineSmall,
+              style: TextTheme.of(context).headlineSmall,
               textAlign: TextAlign.center,
             ),
           OutlinedButton(
             onPressed: onPress,
             child: Text(
               "Retry",
-              style: context.bodyLarge,
+              style: TextTheme.of(context).bodyLarge,
             ),
           ),
         ],

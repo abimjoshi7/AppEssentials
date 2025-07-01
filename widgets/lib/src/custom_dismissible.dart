@@ -29,7 +29,7 @@ class CustomDismissible extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {
                     onPressed();
-                    context.burn();
+                    Navigator.of(context).pop();
                   },
                   child: const Text("Confirm"),
                 ),

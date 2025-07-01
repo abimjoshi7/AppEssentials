@@ -8,7 +8,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
 import 'package:table_calendar/table_calendar.dart';
-import 'package:utils/utils.dart';
 
 part 'amount_status.dart';
 part 'app_calendar.dart';

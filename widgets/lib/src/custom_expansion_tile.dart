@@ -24,14 +24,14 @@ class CustomExpansionTile<T> extends StatelessWidget {
   final Widget? trailing;
   final ValueChanged<bool>? onExpansionChanged;
   final bool isExpanded;
-  final ExpansionTileController? expansionTileController;
+  final ExpansibleController? expansionTileController;
 
   @override
   Widget build(BuildContext context) {
     return Theme(
       data: Theme.of(context).copyWith(
-        highlightColor: kClrTrns,
-        splashColor: kClrTrns,
+        highlightColor: Colors.transparent,
+        splashColor: Colors.transparent,
       ),
       child: ExpansionTileTheme(
         data: ExpansionTileThemeData(
@@ -42,10 +42,10 @@ class CustomExpansionTile<T> extends StatelessWidget {
           leading: leading,
           initiallyExpanded: isExpanded,
           onExpansionChanged: onExpansionChanged,
-          backgroundColor: kClrTrns,
+          backgroundColor: Colors.transparent,
           title: Text(
             getTitle(t),
-            style: context.titleMedium,
+            style: TextTheme.of(context).titleMedium,
           ),
           trailing: trailing,
           children: getChildren(t),

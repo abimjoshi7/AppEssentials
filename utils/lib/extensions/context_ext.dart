@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 extension BuildContextEntension<T> on BuildContext {
   // * Core
   /// Returns a [VoidCallback] that pops the current route off the navigator.
-  VoidCallback get burn => () => Navigator.pop(this);
+  VoidCallback get burn => () => Navigator.of(this).pop();
 
   // * Dimensions
   /// Returns true if the device is considered mobile (small width).
@@ -164,7 +164,9 @@ extension BuildContextEntension<T> on BuildContext {
             );
 
             if (shouldPop ?? false) {
-              Navigator.pop(this);
+              if (context.mounted) {
+                Navigator.of(context).pop();
+              }
             }
           },
           child: Padding(
@@ -267,13 +269,13 @@ class _ExitFormDialog extends StatelessWidget {
         _buildDialogButton(
           context: context,
           label: "Cancel",
-          onPressed: () => Navigator.pop(context, false),
+          onPressed: () => Navigator.of(context).pop(false),
           isOutlined: true,
         ),
         _buildDialogButton(
           context: context,
           label: "OK",
-          onPressed: () => Navigator.pop(context, true),
+          onPressed: () => Navigator.of(context).pop(true),
         ),
       ],
     );

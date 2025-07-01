@@ -18,14 +18,14 @@ class RoutingCard extends StatelessWidget {
       onTap: callback,
       child: Card(
         child: Padding(
-          padding: 8.paddingAll,
+          padding: EdgeInsets.all(8),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(
                 child: Text(
                   label,
-                  style: context.labelLarge,
+                  style: TextTheme.of(context).labelLarge,
                   overflow: TextOverflow.ellipsis,
                 ),
               ),

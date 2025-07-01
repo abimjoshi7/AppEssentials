@@ -13,7 +13,10 @@ class InfoCard extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
-        color: context.primaryColorLight.withValues(alpha: 0.5),
+        color: Theme.of(context)
+            .colorScheme
+            .primaryContainer
+            .withValues(alpha: 0.5),
       ),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -21,14 +24,13 @@ class InfoCard extends StatelessWidget {
           children: [
             Icon(
               Icons.info_outline_rounded,
-              color: context.disabledColor,
               size: 15,
             ),
-            8.widthBox,
+            SizedBox(width: 8),
             Flexible(
               child: Text(
                 text,
-                style: context.labelSmallDisabled,
+                style: TextTheme.of(context).labelSmall,
               ),
             ),
           ],

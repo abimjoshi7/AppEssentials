@@ -48,7 +48,7 @@ class _OTPDialogState extends State<OTPDialog> {
     return AlertDialog(
       title: Text(
         'Enter OTP provided in email',
-        style: context.titleMedium,
+        style: TextTheme.of(context).titleMedium,
       ),
       content: Column(
         mainAxisSize: MainAxisSize.min,
@@ -60,7 +60,7 @@ class _OTPDialogState extends State<OTPDialog> {
               widget.count,
               (index) => Container(
                 margin: const EdgeInsets.all(3),
-                width: context.width * 0.09,
+                width: context.size!.width * 0.09,
                 child: TextField(
                   autofocus: index == 0,
                   controller: _controllers[index],
@@ -93,9 +93,6 @@ class _OTPDialogState extends State<OTPDialog> {
             onPressed: widget.onResend,
             child: const Text(
               'Resend OTP',
-              style: TextStyle(
-                color: kClrAqua,
-              ),
             ),
           ),
         ],

@@ -24,15 +24,15 @@ class CustomFormField extends StatelessWidget {
               children: [
                 Text(
                   labelText!,
-                  style: context.labelLarge,
+                  style: TextTheme.of(context).labelLarge,
                 ),
                 Visibility(
                   visible: isRequired,
                   child: Text(
                     " *",
-                    style: context.labelLarge?.copyWith(
-                      color: kClrRed,
-                    ),
+                    style: TextTheme.of(context).labelLarge?.copyWith(
+                          color: Colors.red,
+                        ),
                   ),
                 ),
               ],

@@ -13,7 +13,7 @@ class StatusIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: 4.paddingAll,
+      padding: EdgeInsets.all(4),
       child: DecoratedBox(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(24),

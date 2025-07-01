@@ -14,7 +14,7 @@ class OrDivider extends StatelessWidget {
           ),
           child: Text(
             "OR",
-            style: context.bodySmall?.copyWith(
+            style: TextTheme.of(context).bodySmall?.copyWith(
               fontSize: 16,
             ),
           ),

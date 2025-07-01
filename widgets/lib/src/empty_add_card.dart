@@ -18,14 +18,14 @@ class EmptyAddCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Padding(
-        padding: 16.paddingAll,
+        padding: EdgeInsets.all(16),
         child: Column(
           children: [
             Align(
               alignment: Alignment.topLeft,
               child: Text(
                 title,
-                style: context.labelLarge,
+                style: TextTheme.of(context).labelLarge,
               ),
             ),
             Expanded(
@@ -44,9 +44,9 @@ class EmptyAddCard extends StatelessWidget {
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
                               hintText,
-                              style: context.labelSmall?.copyWith(
-                                color: Colors.grey,
-                              ),
+                              style: TextTheme.of(context).labelSmall?.copyWith(
+                                    color: Colors.grey,
+                                  ),
                             ),
                           ),
                         ],

@@ -25,14 +25,14 @@ class MainViewSection extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: context.titleMedium,
+                style: TextTheme.of(context).titleMedium,
               ),
               if (trailingTitle != null)
                 TextButton(
                   onPressed: trailingCallback,
                   child: Text(
                     trailingTitle!,
-                    style: context.labelSmall,
+                    style: TextTheme.of(context).labelSmall,
                   ),
                 ),
             ],

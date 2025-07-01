@@ -22,33 +22,30 @@ class KeyValueWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         SizedBox(
-          width: context.width * 0.4,
+          width: context.size!.width * 0.4,
           child: Row(
             children: [
               Flexible(
                 child: Text(
                   "$leading ",
                   style: leadingStyle ??
-                      context.labelLarge?.copyWith(
-                        fontWeight: FontWeight.w500,
-                        overflow: TextOverflow.ellipsis,
-                      ),
+                      TextTheme.of(context).labelLarge?.copyWith(
+                            fontWeight: FontWeight.w500,
+                            overflow: TextOverflow.ellipsis,
+                          ),
                 ),
               ),
               if (qty != null)
                 Text(
                   " x $qty",
-                  style: context.bodySmall?.copyWith(
-                    color: kClrAqua,
-                  ),
                 ),
             ],
           ),
         ),
-        4.widthBox,
+        SizedBox(width: 4),
         Text(
           trailing,
-          style: trailingStyle ?? context.labelLarge,
+          style: trailingStyle ?? TextTheme.of(context).labelLarge,
           overflow: TextOverflow.ellipsis,
         ),
       ],

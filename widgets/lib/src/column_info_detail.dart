@@ -19,7 +19,7 @@ class ColumnInfoDetail extends StatelessWidget {
       children: [
         Text(
           label,
-          style: context.labelSmallDisabled,
+          style: TextTheme.of(context).labelSmall,
         ),
         Row(
           children: [
@@ -28,12 +28,12 @@ class ColumnInfoDetail extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 8.0),
                 child: Text(
                   currencyName!,
-                  style: context.titleLarge,
+                  style: TextTheme.of(context).titleLarge,
                 ),
               ),
             Text(
               content,
-              style: context.titleLarge,
+              style: TextTheme.of(context).titleLarge,
             ),
           ],
         ),

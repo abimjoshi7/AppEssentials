@@ -42,7 +42,7 @@ class ViewPage extends StatelessWidget {
     return AppBar(
       title: Text(
         appTitle ?? '',
-        style: context.titleMedium,
+        style: TextTheme.of(context).titleMedium,
       ),
       actions: [
         if (onSearch != null)
@@ -52,7 +52,7 @@ class ViewPage extends StatelessWidget {
           ),
       ],
       bottom: PreferredSize(
-        preferredSize: Size.fromHeight(context.height * 0.045),
+        preferredSize: Size.fromHeight(context.size!.height * 0.045),
         child: buildBottomAppBar(context),
       ),
     );
@@ -76,7 +76,7 @@ class ViewPage extends StatelessWidget {
   Widget buildCustomTabBar(BuildContext context) {
     return ConstrainedBox(
       constraints: BoxConstraints.loose(
-        Size(context.width * 0.5, context.height * 0.045),
+        Size(context.size!.width * 0.5, context.size!.height * 0.045),
       ),
       child: tabController == null
           ? const SizedBox.shrink()
@@ -93,9 +93,9 @@ class ViewPage extends StatelessWidget {
       child: Row(
         children: [
           SizedBox(
-            height: context.height * 0.025,
+            height: context.size!.height * 0.025,
             child: VerticalDivider(
-              color: context.disabledColor,
+              color: Theme.of(context).colorScheme.tertiary,
             ),
           ),
           InkWell(

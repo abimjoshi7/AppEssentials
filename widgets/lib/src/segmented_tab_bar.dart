@@ -26,14 +26,14 @@ class SegmentedTabBar extends StatelessWidget {
             ),
       ),
       height: height,
-      width: width ?? context.width,
+      width: width ?? context.size?.width,
       child: TabBar(
         dividerHeight: 0,
-        overlayColor: WidgetStatePropertyAll(context.background),
+        overlayColor: WidgetStatePropertyAll(Theme.of(context).colorScheme.surface),
         controller: tabController,
-        labelColor: context.indicatorColor,
+        labelColor: Theme.of(context).colorScheme.primary,
         indicator: BoxDecoration(
-          color: context.primary,
+          color: Theme.of(context).colorScheme.primary,
           borderRadius: borderRadius ??
               BorderRadius.circular(
                 16,

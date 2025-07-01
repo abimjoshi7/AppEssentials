@@ -16,14 +16,14 @@ class DatePickerFormfield extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final formattedDate = date != null ? date?.dMy : '';
+    final formattedDate = date != null ? date?.day : '';
 
     return CustomFormField(
       labelText: _labelText,
       isRequired: isRequired,
       child: CustomTextFormField(
         readOnly: true,
-        controller: TextEditingController(text: formattedDate),
+        controller: TextEditingController(text: formattedDate.toString()),
         onTap: () async {
           DateTime? pickedDate = await showDatePicker(
             context: context,

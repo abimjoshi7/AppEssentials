@@ -53,26 +53,27 @@ class _AppSorterState<T> extends State<AppSorter<T>> {
         toSelectString = widget.initialValue;
         isAscending = true;
       });
-      Navigator.pop(context);
+      Navigator.of(context).pop(context);
     }
 
     void onApply() {
       if (selectedValue == null) return;
       final sortedRecord = (selectedValue!, isAscending);
       widget.onSelected(sortedRecord);
-      Navigator.pop(context);
+      Navigator.of(context).pop(context);
     }
 
     return Column(
+      spacing: 16,
       mainAxisSize: MainAxisSize.min,
       children: [
         Row(
+          spacing: 16,
           children: [
-            16.widthBox,
             Expanded(
               child: Text(
                 "Sort",
-                style: context.headlineSmall,
+                style: TextTheme.of(context).headlineSmall,
               ),
             ),
             IconButton(
@@ -81,14 +82,13 @@ class _AppSorterState<T> extends State<AppSorter<T>> {
             ),
           ],
         ),
-        16.heightBox,
         Row(
+          spacing: 8,
           children: [
             Text(
               "Sort by",
-              style: context.labelSmallDisabled,
+              style: TextTheme.of(context).labelSmall,
             ),
-            8.widthBox,
             const Expanded(
               child: Divider(),
             )
@@ -107,12 +107,12 @@ class _AppSorterState<T> extends State<AppSorter<T>> {
                             24,
                           ),
                           border: Border.all(
-                            color: context.primary,
+                            color: Theme.of(context).colorScheme.primary,
                           ),
                         )
                       : null,
               child: ListTile(
-                splashColor: kClrTrns,
+                splashColor: Colors.transparent,
                 onTap: () => onSelect(
                   selectedString: widget.getStringList(widget.list)[index],
                   value: widget.list[index],
@@ -121,7 +121,7 @@ class _AppSorterState<T> extends State<AppSorter<T>> {
                   toSelectString == widget.getStringList(widget.list)[index]
                       ? Icons.circle
                       : Icons.circle_outlined,
-                  color: context.primary,
+                  color: Theme.of(context).colorScheme.primary,
                 ),
                 title: Text(
                   widget.getStringList(widget.list)[index],
@@ -143,7 +143,7 @@ class _AppSorterState<T> extends State<AppSorter<T>> {
         ListTile(
           title: Text(
             "Sort Selected",
-            style: context.labelSmallDisabled,
+            style: TextTheme.of(context).labelSmall,
           ),
           subtitle: Text(
               "$toSelectString ${isAscending ? "(Ascending)" : "(Descending)"}"),
@@ -173,14 +173,14 @@ class _BoolWidget extends StatelessWidget {
       children: [
         Text(
           isAscending ? "Ascending" : "Descending",
-          style: context.labelLarge?.copyWith(
-            fontWeight: FontWeight.w300,
-          ),
+          style: TextTheme.of(context).labelLarge?.copyWith(
+                fontWeight: FontWeight.w300,
+              ),
         ),
-        8.widthBox,
+        SizedBox(width: 8),
         Icon(
           isAscending ? Icons.arrow_upward : Icons.arrow_downward,
-          color: context.primary,
+          color: Theme.of(context).colorScheme.primary,
           size: 16,
         )
       ],

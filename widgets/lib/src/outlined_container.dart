@@ -15,29 +15,29 @@ class OutlinedContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: 8.paddingAll,
-      padding: 16.paddingAll,
+      margin: EdgeInsets.all(8),
+      padding: EdgeInsets.all(16),
       decoration: BoxDecoration(
         border: Border.all(
-          color: kClrGrey.withValues(alpha: .25),
+          color: Colors.grey.withValues(alpha: .25),
         ),
         borderRadius: BorderRadius.circular(24),
       ),
       child: Column(
+        spacing: 16,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 title,
-                style: context.titleLarge?.copyWith(
-                  fontWeight: FontWeight.w500,
-                ),
+                style: TextTheme.of(context).titleLarge?.copyWith(
+                      fontWeight: FontWeight.w500,
+                    ),
               ),
               trailingWidget ?? const SizedBox.shrink(),
             ],
           ),
-          16.heightBox,
           child,
         ],
       ),

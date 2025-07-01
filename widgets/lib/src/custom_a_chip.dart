@@ -24,23 +24,23 @@ class CustomAChip extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          if (isTrailingDisabled) 4.widthBox,
+          if (isTrailingDisabled) SizedBox(width: 4),
           if (leadingIcon != null)
             Icon(
               leadingIcon,
               size: iconSize,
             ),
-          4.widthBox,
+          SizedBox(width: 4),
           ConstrainedBox(
             constraints: BoxConstraints.loose(
               Size(
-                context.width * 0.25,
-                context.height * 0.05,
+                context.size!.width * 0.25,
+                context.size!.height * 0.05,
               ),
             ),
             child: Text(
               label,
-              style: context.labelLarge,
+              style: TextTheme.of(context).labelLarge,
               overflow: TextOverflow.ellipsis,
             ),
           ),
@@ -49,7 +49,6 @@ class CustomAChip extends StatelessWidget {
             child: Icon(
               Icons.arrow_drop_down,
               size: iconSize,
-              color: kClrBgA,
             ),
           ),
         ],

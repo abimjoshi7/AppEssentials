@@ -19,7 +19,7 @@ class NoDataWidget extends StatelessWidget {
           children: [
             Flexible(
               child: SvgPicture.asset(
-                "$kUtilPackage${AssetRes.kEmptyImg}",
+                "assets/empty.svg",
               ),
             ),
             Flexible(
@@ -27,7 +27,7 @@ class NoDataWidget extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
                   errorMessage ?? "No Data Found",
-                  style: context.labelSmallDisabled,
+                  style: TextTheme.of(context).labelSmall,
                 ),
               ),
             ),

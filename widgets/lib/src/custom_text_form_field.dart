@@ -52,9 +52,11 @@ class CustomTextFormField extends StatelessWidget {
       child: TextFormField(
         initialValue: value,
         onTap: onTap,
-        style: context.labelLarge?.copyWith(
-          color: context.isDark ? kClrWhite : kClrBlack,
-        ),
+        style: TextTheme.of(context).labelLarge?.copyWith(
+              color: Theme.of(context).brightness == Brightness.dark
+                  ? Colors.white
+                  : Colors.black,
+            ),
         autofocus: autofocus,
         controller: controller,
         decoration: InputDecoration(
@@ -65,11 +67,6 @@ class CustomTextFormField extends StatelessWidget {
                 TextInputType.phone => '+977',
                 _ => "Tap to enter",
               },
-          hintStyle: TextStyle(
-            color: readOnly
-                ? context.hintColor.withAlpha(255)
-                : context.disabledColor,
-          ),
           filled: false,
           suffixIconConstraints: BoxConstraints.tight(const Size(25, 30)),
           suffixIcon: FittedBox(

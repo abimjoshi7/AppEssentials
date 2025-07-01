@@ -35,9 +35,9 @@ class DPBCard extends StatelessWidget {
     return CustomDismissible(
       onPressed: onDismiss ?? () {},
       child: Card(
-        surfaceTintColor: context.primary,
+        surfaceTintColor: Theme.of(context).colorScheme.primary,
         child: ListTile(
-          contentPadding: 4.paddingAll,
+          contentPadding: EdgeInsets.all(4),
           onTap: onTap,
           leading: leading ??
               (date == null
@@ -71,16 +71,16 @@ class DPBCard extends StatelessWidget {
                       if (status != null && statusName != null)
                         StatusIndicator(
                           color: switch (status) {
-                            1 => kClrGreenA,
-                            _ => context.disabledColor,
+                            1 => Colors.greenAccent,
+                            _ => Colors.green,
                           },
                           text: statusName ?? "Unknown",
                         ),
                       trailing == null
                           ? Flexible(
                               child: Text(
-                                "${currencyName ?? 'Rs'} ${amount.formatWithCommas()}",
-                                style: context.titleMedium,
+                                "${currencyName ?? 'Rs'} $amount",
+                                style: TextTheme.of(context).titleMedium,
                                 overflow: TextOverflow.ellipsis,
                               ),
                             )

@@ -31,7 +31,7 @@ class ElevatedCard extends StatelessWidget {
                 children: [
                   Text(
                     title!,
-                    style: context.titleMedium,
+                    style: TextTheme.of(context).titleMedium,
                   ),
                   if (trailing != null) trailing!,
                 ],

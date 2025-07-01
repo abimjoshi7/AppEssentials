@@ -49,7 +49,7 @@ class CustomDropdownButtonForField<T> extends StatelessWidget {
       child: DropdownSearch<T>(
         enabled: enabled,
         decoratorProps: DropDownDecoratorProps(
-          baseStyle: context.labelLarge,
+          baseStyle: TextTheme.of(context).labelLarge,
           textAlignVertical: TextAlignVertical.center,
           textAlign: textAlign,
           decoration: InputDecoration(
@@ -64,7 +64,7 @@ class CustomDropdownButtonForField<T> extends StatelessWidget {
           fit: FlexFit.loose,
           constraints: BoxConstraints.loose(
             Size.fromHeight(
-              context.height * 0.5,
+              context.size!.height * 0.5,
             ),
           ),
           showSearchBox: list.length > 8,
@@ -76,7 +76,6 @@ class CustomDropdownButtonForField<T> extends StatelessWidget {
             shrinkWrap: true,
           ),
           searchFieldProps: TextFieldProps(
-            
             onChanged: onSearchChanged,
             decoration: InputDecoration(
               border: InputBorder.none,
@@ -93,5 +92,11 @@ class CustomDropdownButtonForField<T> extends StatelessWidget {
         compareFn: compareFn,
       ),
     );
+  }
+}
+
+extension on ScrollController? {
+  addPagination(void Function() param0) {
+    param0();
   }
 }

@@ -34,37 +34,37 @@ class _AppFilterState<T> extends State<AppFilter<T>> {
       required T value}) {
     toSelect.value = selectedString;
     widget.onSelected(value);
-    Navigator.pop(context);
+    Navigator.of(context).pop(context);
   }
 
   @override
   Widget build(BuildContext context) {
     return Column(
+      spacing: 16,
       mainAxisSize: MainAxisSize.min,
       children: [
         Row(
+          spacing: 16,
           children: [
-            16.widthBox,
             Expanded(
               child: Text(
                 "Filter",
-                style: context.headlineSmall,
+                style: TextTheme.of(context).headlineSmall,
               ),
             ),
             IconButton(
               icon: const Icon(Icons.clear),
-              onPressed: context.burn,
+              onPressed: Navigator.of(context).pop,
             )
           ],
         ),
-        16.heightBox,
         Row(
+          spacing: 8,
           children: [
             Text(
               "Default Filter",
-              style: context.labelSmallDisabled,
+              style: TextTheme.of(context).labelSmall,
             ),
-            8.widthBox,
             const Expanded(
               child: Divider(),
             ),
@@ -83,12 +83,11 @@ class _AppFilterState<T> extends State<AppFilter<T>> {
                           24,
                         ),
                         border: Border.all(
-                          color: context.primary,
+                          color: Theme.of(context).colorScheme.primary,
                         ),
                       )
                     : null,
             child: ListTile(
-              splashColor: kClrTrns,
               onTap: () => onSelect(
                 context: context,
                 selectedString: widget.getStringList(widget.list)[index],
@@ -102,7 +101,6 @@ class _AppFilterState<T> extends State<AppFilter<T>> {
                   toSelectString == widget.getStringList(widget.list)[index]
                       ? const Icon(
                           Icons.check_circle_rounded,
-                          color: kClrGreen,
                         )
                       : null,
             ),
