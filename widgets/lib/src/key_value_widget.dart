@@ -22,7 +22,7 @@ class KeyValueWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         SizedBox(
-          width: context.size!.width * 0.4,
+          width: context.width * 0.4,
           child: Row(
             children: [
               Flexible(

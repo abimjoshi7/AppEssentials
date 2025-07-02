@@ -14,8 +14,8 @@ class PopupBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return ConstrainedBox(
       constraints: BoxConstraints(
-        maxHeight: context.size!.height * 0.25,
-        maxWidth: context.size!.width * 0.6,
+        maxHeight: context.height * 0.25,
+        maxWidth: context.width * 0.6,
       ),
       child: Card(
         child: Column(

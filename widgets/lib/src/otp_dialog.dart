@@ -60,7 +60,7 @@ class _OTPDialogState extends State<OTPDialog> {
               widget.count,
               (index) => Container(
                 margin: const EdgeInsets.all(3),
-                width: context.size!.width * 0.09,
+                width: context.width * 0.09,
                 child: TextField(
                   autofocus: index == 0,
                   controller: _controllers[index],
