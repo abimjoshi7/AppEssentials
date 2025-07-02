@@ -11,7 +11,6 @@ dependencies:
   dropdown_search: ^6.0.1
   flutter:
     sdk: flutter
-  flutter_svg: ^2.0.10+1
   intl: ^0.20.1
   table_calendar: ^3.1.2
 

@@ -18,8 +18,8 @@ class NoDataWidget extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Flexible(
-              child: SvgPicture.asset(
-                "assets/empty.svg",
+              child: Image.asset(
+                "assets/open-chest.png",
               ),
             ),
             Flexible(
