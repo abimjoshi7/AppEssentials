@@ -34,8 +34,8 @@ class CustomAChip extends StatelessWidget {
           ConstrainedBox(
             constraints: BoxConstraints.loose(
               Size(
-                context.width * 0.25,
-                context.height * 0.05,
+                MediaQuery.sizeOf(context).width * 0.25,
+                MediaQuery.sizeOf(context).height * 0.05,
               ),
             ),
             child: Text(

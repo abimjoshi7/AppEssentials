@@ -32,7 +32,6 @@ part 'elevated_card.dart';
 part 'empty_add_card.dart';
 part 'error_screen.dart';
 part 'generic_failure_message.dart';
-part 'helper.dart';
 part 'icon_text.dart';
 part 'inc_dec.dart';
 part 'info_card.dart';

@@ -43,7 +43,6 @@ class CustomDropdownButtonForField<T> extends StatelessWidget {
   Widget build(
     BuildContext context,
   ) {
-
     return CustomFormField(
       isRequired: isRequired,
       labelText: labelText,
@@ -65,7 +64,7 @@ class CustomDropdownButtonForField<T> extends StatelessWidget {
           fit: FlexFit.loose,
           constraints: BoxConstraints.loose(
             Size.fromHeight(
-              context.height * 0.5,
+              MediaQuery.sizeOf(context).height * 0.5,
             ),
           ),
           showSearchBox: list.length > 8,

@@ -52,7 +52,8 @@ class ViewPage extends StatelessWidget {
           ),
       ],
       bottom: PreferredSize(
-        preferredSize: Size.fromHeight(context.height * 0.045),
+        preferredSize:
+            Size.fromHeight(MediaQuery.sizeOf(context).height * 0.045),
         child: buildBottomAppBar(context),
       ),
     );
@@ -76,7 +77,8 @@ class ViewPage extends StatelessWidget {
   Widget buildCustomTabBar(BuildContext context) {
     return ConstrainedBox(
       constraints: BoxConstraints.loose(
-        Size(context.width * 0.5, context.height * 0.045),
+        Size(MediaQuery.sizeOf(context).width * 0.5,
+            MediaQuery.sizeOf(context).height * 0.045),
       ),
       child: tabController == null
           ? const SizedBox.shrink()
@@ -93,7 +95,7 @@ class ViewPage extends StatelessWidget {
       child: Row(
         children: [
           SizedBox(
-            height: context.height * 0.025,
+            height: MediaQuery.sizeOf(context).height * 0.025,
             child: VerticalDivider(
               color: Theme.of(context).colorScheme.tertiary,
             ),
