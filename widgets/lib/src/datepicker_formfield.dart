@@ -16,8 +16,9 @@ class DatePickerFormfield extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final formattedDate = date != null ? date?.day : '';
-
+    final formattedDate = date != null
+        ? '${date!.day.toString().padLeft(2, '0')} ${_getMonthName(date!.month)} ${date!.year}'
+        : '';
     return CustomFormField(
       labelText: _labelText,
       isRequired: isRequired,
