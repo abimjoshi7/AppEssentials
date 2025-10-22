@@ -247,7 +247,7 @@ class MLSelectField extends StatelessWidget {
     return DropdownButtonFormField<String>(
       validator: validator,
       items: items,
-      value: value,
+      initialValue: value,
       onChanged: (value) {
         if (value != null) {
           controller.text = value;

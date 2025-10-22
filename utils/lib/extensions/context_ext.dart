@@ -71,8 +71,8 @@ extension BuildContextEntension<T> on BuildContext {
 
   TextStyle? get labelSmall => TextTheme.of(this).labelSmall;
 
-  TextStyle? get labelSmallDisabled => this.labelSmall?.copyWith(
-        color: this.disabledColor,
+  TextStyle? get labelSmallDisabled => labelSmall?.copyWith(
+        color: disabledColor,
       );
 
   // * Colors
@@ -215,7 +215,7 @@ extension BuildContextEntension<T> on BuildContext {
                   isSuccessful
                       ? Icons.done_rounded
                       : Icons.warning_amber_rounded,
-                  color: isSuccessful ? this.tertiary : errorColor,
+                  color: isSuccessful ? tertiary : errorColor,
                 ),
                 const SizedBox(width: 16),
                 Expanded(

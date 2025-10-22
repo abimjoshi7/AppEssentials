@@ -8,6 +8,9 @@ import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:table_calendar/table_calendar.dart';
 
+part 'app_drawer/controller.dart';
+part 'app_drawer/state.dart';
+part 'app_drawer/wrapper.dart';
 part 'amount_status.dart';
 part 'app_calendar.dart';
 part 'app_filter.dart';
@@ -54,3 +57,4 @@ part 'status_indicator.dart';
 part 'stckd_btm_btn.dart';
 part 'value_box.dart';
 part 'view_page.dart';
+
