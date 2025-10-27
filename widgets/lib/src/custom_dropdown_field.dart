@@ -89,7 +89,7 @@ class CustomDropdownButtonForField<T> extends StatelessWidget {
         },
         selectedItem: value,
         filterFn: filterFn,
-        compareFn: compareFn,
+        compareFn: compareFn ?? (x, y) => true,
       ),
     );
   }
